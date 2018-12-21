@@ -1,0 +1,1103 @@
+@charset "utf-8";
+
+/*
+Theme Name:Revive Pro
+Theme URI:http://www.frogsthemes.com
+Description:A responsive WordPress business theme
+Author:FrogsThemes.com
+Author URI:http://www.frogsthemes.com
+Version:1.0.9
+*/
+
+/* =============================================================================
+   HTML5 Boilerplate CSS:h5bp.com/css
+   ========================================================================== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video { margin:0; padding:0; border:0; font-size:100%; font:inherit; vertical-align:baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display:block; }
+audio, canvas, video { display:inline-block; *display:inline; *zoom:1; }
+audio:not([controls]) { display:none; }
+[hidden] { display:none; }
+html { font-size:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+html, button, input, select, textarea { font-family:sans-serif; color:#222; }
+body { font:14px/24px 'ProximaNova-Regular', Arial, Helvetica, sans-serif; color:#5e5e5e; background:#fff; }
+::-moz-selection { background:#fe57a1; color:#fff; text-shadow:none; }
+::selection { background:#fe57a1; color:#fff; text-shadow:none; }
+a[href], label[for], select, 
+input[type=checkbox], input[type=radio] { cursor:pointer; }
+abbr[title] { border-bottom:1px dotted; }
+b, strong { font-weight:normal; font-family:'ProximaNova-Bold';; }
+blockquote:before, blockquote:after, q:before, q:after { content:''; content:none;}
+dfn { font-style:italic; }
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+ins { background:#ff9; color:#000; text-decoration:none; }
+mark { background:#ff0; color:#000; font-style:italic; font-weight:bold; }
+pre, code, kbd, samp { font-family:monospace, serif; _font-family:'courier new', monospace; font-size:1em; }
+pre { white-space:pre; white-space:pre-wrap; word-wrap:break-word; }
+q { quotes:none; }
+q:before, q:after { content:""; content:none; }
+small { font-size:85%; }
+sub, sup { font-size:75%; line-height:0; position:relative; vertical-align:baseline; }
+sup { top:-0.5em; }
+sub { bottom:-0.25em; }
+ul, ol { list-style:none; }
+dd { margin:0 0 0 40px; }
+nav ul, nav ol { list-style:none; list-style-image:none; margin:0; padding:0; }
+img { border:0; -ms-interpolation-mode:bicubic; vertical-align:middle; }
+svg:not(:root) { overflow:hidden; }
+figure { margin:0; }
+
+.hide { position:absolute !important; left:-9999em !important; }
+.ie7 .clearfix { zoom:1; }
+em { font-style:italic; }
+del { text-decoration:line-through; }
+address, cite, dfn { font-style:normal; } 
+abbr, acronym { border-bottom:1px dotted #999; cursor:help; }
+
+#main #content ul, #main #content ol{ margin:0 0 1em 0; padding:0 0 0 20px; }
+#main #content ul{ list-style-type:disc; }
+#main #content ol{ list-style-type:decimal; }
+
+/* HEADINGS
+-------------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 { font-weight:normal; text-transform:none; font-family:'ProximaNova-SemiBold'; padding:0 0 18px; line-height:1.3em; }
+h1 { color:#3b4043; font-size:36px; font-family:'ProximaNova-Bold'; }
+h2 { color:#3b4043; font-size:24px; }
+h3 { color:#999; font-size:18px; text-transform:none; }
+
+/* FORMS
+-------------------------------------------------------------------*/
+form { margin:0; }
+fieldset { border:0; margin:0; padding:0; }
+label { cursor:pointer; }
+legend { border:0; *margin-left:-7px; padding:0; white-space:normal; }
+button, input, select, textarea { font-size:100%; margin:0; vertical-align:baseline; *vertical-align:middle; }
+button, input { line-height:normal; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor:pointer; -webkit-appearance:button; *overflow:visible; padding:0; }
+button[disabled], input[disabled] { cursor:default; }
+input[type="checkbox"], input[type="radio"] { box-sizing:border-box; padding:0; *width:13px; *height:13px; }
+input[type="search"] { -webkit-appearance:textfield; -moz-box-sizing:content-box; -webkit-box-sizing:content-box; box-sizing:content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance:none; }
+textarea { overflow:auto; vertical-align:top; resize:vertical; }
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color:#f0dddd; }
+
+button::-moz-focus-inner, 
+input[type=button]::-moz-focus-inner, 
+input[type=image]::-moz-focus-inner, 
+input[type=reset]::-moz-focus-inner, 
+input[type=submit]::-moz-focus-inner { border:0; }
+
+
+
+
+/* SEMANTIC CONTAINERS
+-------------------------------------------------------------------*/
+#sidebar				{ float:right; }
+#content.contentright	{ float:right; margin-right:0; }
+#content.contentleft	{ float:left; }
+#sidebar.sidebarright	{ float:right; }
+#sidebar.sidebarleft	{ float:left; }
+.page					{ clear:both; }
+
+/* COLUMNS
+-------------------------------------------------------------------*/
+.pagewrap { width:100%; position:relative; overflow:hidden; }
+.columns { overflow:hidden; /*margin:0 0 0 -30px;*/ padding-bottom:87px; }
+.columns .col { float:left; width:30% !important; font:14px/20px Arial, Helvetica, sans-serif; color:#5e5e5e; margin:0 0 0 5% !important; }
+.columns .col:first-child { margin:0 0 0 0 !important }
+.columns .col p { margin:0 0 17px }
+.columns .col h2 { color:#383435; font:21px/23px 'ProximaNova-ExtraBold', sans-serif; margin:0 0 16px; text-transform:uppercase; text-align:left; }
+.columns .col img { width:100%; display:block; margin:0 0 8px; }
+.columns .col .view{
+	display:block;
+	position:relative;
+	background:#ee2724;
+	background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlMjcyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMlIiBzdG9wLWNvbG9yPSIjZWMxNTEzIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNDElIiBzdG9wLWNvbG9yPSIjZTMwZDBkIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTYlIiBzdG9wLWNvbG9yPSIjZGIwOTA4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODUlIiBzdG9wLWNvbG9yPSIjZDMwMzAxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODglIiBzdG9wLWNvbG9yPSIjZDAwMjAyIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTElIiBzdG9wLWNvbG9yPSIjYjkwMTAxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTQlIiBzdG9wLWNvbG9yPSIjOGMwMDAxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTclIiBzdG9wLWNvbG9yPSIjNmMwMDAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzc2MTIxMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background:-moz-linear-gradient(top,  #ee2724 0%, #ec1513 3%, #e30d0d 41%, #db0908 56%, #d30301 85%, #d00202 88%, #b90101 91%, #8c0001 94%, #6c0000 97%, #761212 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ee2724), color-stop(3%,#ec1513), color-stop(41%,#e30d0d), color-stop(56%,#db0908), color-stop(85%,#d30301), color-stop(88%,#d00202), color-stop(91%,#b90101), color-stop(94%,#8c0001), color-stop(97%,#6c0000), color-stop(100%,#761212));
+	background:-webkit-linear-gradient(top,  #ee2724 0%,#ec1513 3%,#e30d0d 41%,#db0908 56%,#d30301 85%,#d00202 88%,#b90101 91%,#8c0001 94%,#6c0000 97%,#761212 100%);
+	background:-o-linear-gradient(top,  #ee2724 0%,#ec1513 3%,#e30d0d 41%,#db0908 56%,#d30301 85%,#d00202 88%,#b90101 91%,#8c0001 94%,#6c0000 97%,#761212 100%);
+	background:-ms-linear-gradient(top,  #ee2724 0%,#ec1513 3%,#e30d0d 41%,#db0908 56%,#d30301 85%,#d00202 88%,#b90101 91%,#8c0001 94%,#6c0000 97%,#761212 100%);
+	background:linear-gradient(to bottom,  #ee2724 0%,#ec1513 3%,#e30d0d 41%,#db0908 56%,#d30301 85%,#d00202 88%,#b90101 91%,#8c0001 94%,#6c0000 97%,#761212 100%);
+	-pie-background:linear-gradient( #ee2724 0%,#ec1513 3%,#e30d0d 41%,#db0908 56%,#d30301 85%,#d00202 88%,#b90101 91%,#8c0001 94%,#6c0000 97%,#761212 100%);
+	color:#fff;
+	text-decoration:none;
+	cursor:pointer;
+	font:13px/15px 'ProximaNova-ExtraBold', sans-serif;
+	text-transform:uppercase;
+	padding:10px 10px 10px 20px;
+}
+.columns .col .view span{ display:block; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/bul-06.png) no-repeat 100% 0; }
+.columns .col .view:active{
+	background:#761212;
+	background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzc2MTIxMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMlIiBzdG9wLWNvbG9yPSIjOWMwMDAxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNiUiIHN0b3AtY29sb3I9IiNjZDAxMDIiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5JSIgc3RvcC1jb2xvcj0iI2QxMDEwMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk3JSIgc3RvcC1jb2xvcj0iI2VjMTUxMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZDI2MjMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background:-moz-linear-gradient(top,  #761212 0%, #9c0001 3%, #cd0102 6%, #d10101 9%, #ec1513 97%, #ed2623 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#761212), color-stop(3%,#9c0001), color-stop(6%,#cd0102), color-stop(9%,#d10101), color-stop(97%,#ec1513), color-stop(100%,#ed2623));
+	background:-webkit-linear-gradient(top,  #761212 0%,#9c0001 3%,#cd0102 6%,#d10101 9%,#ec1513 97%,#ed2623 100%);
+	background:-o-linear-gradient(top,  #761212 0%,#9c0001 3%,#cd0102 6%,#d10101 9%,#ec1513 97%,#ed2623 100%);
+	background:-ms-linear-gradient(top,  #761212 0%,#9c0001 3%,#cd0102 6%,#d10101 9%,#ec1513 97%,#ed2623 100%);
+	background:linear-gradient(to bottom,  #761212 0%,#9c0001 3%,#cd0102 6%,#d10101 9%,#ec1513 97%,#ed2623 100%);
+	-pie-background:linear-gradient( #761212 0%,#9c0001 3%,#cd0102 6%,#d10101 9%,#ec1513 97%,#ed2623 100%);
+}
+.columns .col .view:hover{
+	background:#f22520;
+	background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyMjUyMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMlIiBzdG9wLWNvbG9yPSIjZTgxNzEzIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOSUiIHN0b3AtY29sb3I9IiNlZDEzMTIiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMiUiIHN0b3AtY29sb3I9IiNlYjExMTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxNSUiIHN0b3AtY29sb3I9IiNlYzE1MTMiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIyMSUiIHN0b3AtY29sb3I9IiNlNjEyMGYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI0NyUiIHN0b3AtY29sb3I9IiNlMTBiMGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI2NSUiIHN0b3AtY29sb3I9IiNkODA2MDUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5MSUiIHN0b3AtY29sb3I9IiNkMjAyMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5NCUiIHN0b3AtY29sb3I9IiNjZTAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5NyUiIHN0b3AtY29sb3I9IiM5YTAyMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNzgwZjEzIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+	background:-moz-linear-gradient(top,  #f22520 0%, #e81713 3%, #ed1312 9%, #eb1110 12%, #ec1513 15%, #e6120f 21%, #e10b0b 47%, #d80605 65%, #d20200 91%, #ce0000 94%, #9a0200 97%, #780f13 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f22520), color-stop(3%,#e81713), color-stop(9%,#ed1312), color-stop(12%,#eb1110), color-stop(15%,#ec1513), color-stop(21%,#e6120f), color-stop(47%,#e10b0b), color-stop(65%,#d80605), color-stop(91%,#d20200), color-stop(94%,#ce0000), color-stop(97%,#9a0200), color-stop(100%,#780f13));
+	background:-webkit-linear-gradient(top,  #f22520 0%,#e81713 3%,#ed1312 9%,#eb1110 12%,#ec1513 15%,#e6120f 21%,#e10b0b 47%,#d80605 65%,#d20200 91%,#ce0000 94%,#9a0200 97%,#780f13 100%);
+	background:-o-linear-gradient(top,  #f22520 0%,#e81713 3%,#ed1312 9%,#eb1110 12%,#ec1513 15%,#e6120f 21%,#e10b0b 47%,#d80605 65%,#d20200 91%,#ce0000 94%,#9a0200 97%,#780f13 100%);
+	background:-ms-linear-gradient(top,  #f22520 0%,#e81713 3%,#ed1312 9%,#eb1110 12%,#ec1513 15%,#e6120f 21%,#e10b0b 47%,#d80605 65%,#d20200 91%,#ce0000 94%,#9a0200 97%,#780f13 100%);
+	background:linear-gradient(to bottom,  #f22520 0%,#e81713 3%,#ed1312 9%,#eb1110 12%,#ec1513 15%,#e6120f 21%,#e10b0b 47%,#d80605 65%,#d20200 91%,#ce0000 94%,#9a0200 97%,#780f13 100%);
+	-pie-background:linear-gradient( #f22520 0%,#e81713 3%,#ed1312 9%,#eb1110 12%,#ec1513 15%,#e6120f 21%,#e10b0b 47%,#d80605 65%,#d20200 91%,#ce0000 94%,#9a0200 97%,#780f13 100%);
+}
+
+
+/* CLASSES
+-------------------------------------------------------------------*/
+.hidden,.screen_reader,hr { display:none; }
+.floatL { float:left; }
+.floatR { float:right; }
+.alignleft { float:left; margin:0 25px 25px 0; }
+.alignright { float:right; margin:0 0 25px 25px; }
+.alignnone { padding:20px 0; }
+.aligncenter { padding:20px 0; text-align:center; margin:0 auto; display:block; }
+.clear { clear:both; }
+
+.col .alignnone { padding:0; }
+
+
+/* TABLE
+-------------------------------------------------------------------*/
+table 				{ margin-bottom:25px; border-collapse:collapse; font-size:1em; width:100%; border-spacing:0; }
+table th 			{ padding:5px 7px; font-weight:bold; vertical-align:top; font-weight:normal; text-align:left; }
+table td 			{ padding:5px 7px; vertical-align:top; }
+table .f-row td 	{ padding:5px 7px; }
+table tr:hover td 	{ padding:5px 7px; }
+
+	
+/* ALERTS
+-------------------------------------------------------------------*/	
+.alert-box { padding:15px 15px 15px 35px; background:#f8f8f8; border-top:1px solid; border-bottom:1px solid; border-color:#e1e1e1; color:#777; font-size:12px; line-height:1.5em; text-align:left; margin:5px 0; }
+.alert-box.info { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/icons/info.png) no-repeat 10px 15px #a6bfde; border-color:#4b87d0; color:#fff; }
+.alert-box.alert { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/icons/alert.png) no-repeat 10px 15px #FFFFE0; border-color:#E6DB55; color:#9d5501; }
+.alert-box.tick { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/icons/tick.png) no-repeat 10px 15px #E0F1B5; border-color:#8BAF5B; color:#4F5F39; }
+.alert-box.error { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/icons/error.png) no-repeat 10px 15px #f0dcdb; border-color:#941210; color:#941210; }
+.alert-box.help { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/icons/help.png) no-repeat 10px 15px #a6bfde; border-color:#4b87d0; color:#fff; }
+.alert-box.download { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/icons/download.png) no-repeat 10px 15px #a6bfde; border-color:#4b87d0; color:#fff; }
+.contact-form .wpb_alert { width:100%; margin:0 auto 15px auto; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
+.page-template-page-contact-php .contact-form .wpb_alert{ margin:0 0 25px 0; }
+.wpb_alert { background-color:#FCF8E3; border:1px solid #FBEED5; border-radius:4px 4px 4px 4px; clear:both; color:#C09853; margin-bottom:18px; padding:8px 35px 8px 14px; text-shadow:0 1px 0 rgba(255, 255, 255, 0.5); }
+.wpb_alert-success, div.wpb_alert-success { background-color:#DFF0D8; border-color:#D6E9C6; color:#468847; }
+.wpb_alert-danger, .wpb_alert-error, div.wpb_alert-danger, div.wpb_alert-error { background-color:#F2DEDE; border-color:#EED3D7; color:#B94A48; }
+.wpb_alert-info, div.wpb_alert-info { background-color:#D9EDF7; border-color:#BCE8F1; color:#3A87AD; }
+.wpb_alert-block { padding-bottom:14px; padding-top:14px; }
+.wpb_alert-block > p, .wpb_alert-block > ul { margin-bottom:0 }
+.wpb_alert-block p + p { margin-top:5px }
+.wpb_alert .messagebox_text { background:url("/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/functions/ft-visual-composer/assets/vc/alert.png") no-repeat scroll left center transparent; padding-left:28px; }
+.wpb_alert-info .messagebox_text { background:url("/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/functions/ft-visual-composer/assets/vc/info.png") no-repeat scroll left center transparent }
+.wpb_alert-success .messagebox_text { background:url("/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/functions/ft-visual-composer/assets/vc/tick.png") no-repeat scroll left center transparent }
+.wpb_alert-error .messagebox_text { background:url("/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/functions/ft-visual-composer/assets/vc/exclamation.png") no-repeat scroll left center transparent }
+.wpb_alert-success .messagebox_text { background:url("/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/functions/ft-visual-composer/assets/vc/tick.png") no-repeat scroll left center transparent }
+.wpb_alert-error .messagebox_text { background:url("/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/functions/ft-visual-composer/assets/vc/exclamation.png") no-repeat scroll left center transparent }
+
+
+/* ADS MANAGER FRONT END STYLING
+-------------------------------------------------------------------*/
+.bannercontainerinner { margin:0 0 40px 0; float:left; width:100%; }
+.bannercontainerinnerbot { margin:0 0 0 0; padding:30px 0; float:left; width:100%; border-top:1px solid #EBEEF1; }
+.bannerspaceinner { width:100%; float:left; text-align:center; position:relative; }
+.bannerspaceinner ul { list-style:none outside none; text-align:center; padding:0; margin:0; width:100% !important; }
+.bannerspaceinner ul li { display:inline; margin:0 auto; float:none; padding:0; width:auto; }
+#content .bannerspaceinner li a img { display:inline-block; max-width:100%; width:auto; }
+.chromeframe { margin:0.2em 0; background:#ccc; color:black; padding:0.2em 0; }
+
+/* FONTS
+-------------------------------------------------------------------*/
+@font-face { font-family:'ProximaNova-Light'; src:url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-light.eot'); src:url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-light.eot#iefix') format('embedded-opentype'), url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-light.woff') format('woff'), url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-light.ttf') format('truetype'), url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-light.svg#ProximaNova-Light') format('svg'); font-weight:normal; font-style:normal; }
+@font-face { font-family:'ProximaNova-Regular'; src:url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-regular.eot'); src:url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-regular.eot#iefix') format('embedded-opentype'), url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-regular.woff') format('woff'), url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-regular.ttf') format('truetype'), url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-regular.svg#ProximaNova-Regular') format('svg'); font-weight:normal; font-style:normal; }
+@font-face { font-family:'ProximaNova-SemiBold'; src:url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-semibold.eot'); src:url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-semibold.eot#iefix') format('embedded-opentype'), url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-semibold.woff') format('woff'), url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-semibold.ttf') format('truetype'), url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-semibold.svg#ProximaNova-SemiBold') format('svg'); font-weight:normal; font-style:normal; }
+@font-face { font-family:'ProximaNova-Bold'; src:url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-bold.eot'); src:url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-bold.eot#iefix') format('embedded-opentype'), url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-bold.woff') format('woff'), url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-bold.ttf') format('truetype'), url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/proximanova-bold.svg#ProximaNova-Bold') format('svg'); font-weight:normal; font-style:normal; }
+@font-face { font-family:'ProximaNova-ExtraBold'; src:url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/ProximaNova-ExtraBold.eot'); src:url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/ProximaNova-ExtraBold.eot#iefix') format('embedded-opentype'), url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/ProximaNova-ExtraBold.woff') format('woff'), url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/ProximaNova-ExtraBold.ttf') format('truetype'), url('/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/fonts/ProximaNova-ExtraBold#ProximaNova-ExtraBold') format('svg'); font-weight:normal; font-style:normal; }
+
+
+/* NORMALIZED STYLES
+------------------------------------------------------------------------------*/
+input, textarea, select { font-family:'ProximaNova-Regular', Arial, Helvetica, sans-serif; }
+a, a:visited { color:#1790d2; text-decoration:none; }
+a:hover, a:active, a:focus { color:#1790d2; text-decoration:underline; }
+
+
+/* ------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------*/
+/* THEME STYLES START
+/* ------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------*/
+
+
+/* CONTAINER
+------------------------------------------------------------------------------*/
+.vc_responsive .vc_row-fluid.testimonials-box > .column_container,
+.container { width:960px; margin:0 auto; clear:both; float:none; }
+#content { float:left; width:70%; }
+#content.fullwidth { width:100%; }
+aside { float:right; width:25%; }
+
+
+
+/* HEADER
+------------------------------------------------------------------------------*/
+#head { background:#3b4043; color:#c5c5c5; font-size:13px; line-height:14px; height:27px; padding:11px 0 0; font-family:'ProximaNova-Bold'; }
+#head .social { float:right; }
+#head .social ul { padding:0; margin:0; }
+#head .social li { float:left; padding:0 0 0 5px; }
+#head .social li a { float:left; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/ico_social.png) no-repeat; height:16px; opacity:.5; width:16px;filter: alpha(opacity=50); zoom: 1; }
+#head .social li a:hover { opacity:1; filter: alpha(opacity=100); zoom: 1; }
+#head .social li a.ico-facebook { background-position:0 0; }
+#head .social li a.ico-youtube { background-position:-21px 0; }
+#head .social li a.ico-twitter { background-position:-42px 0; }
+#head .social li a.ico-linkedin { background-position:-63px 0; }
+#head .social li a.ico-vimeo { background-position:-84px 0; }
+#head .social li a.ico-flickr { background-position:-105px 0; }
+#head .social li a.ico-rss { background-position:-126px 0; }
+#head .social li a.ico-tumblr { background-position:-168px 0; }
+#head .social li a.ico-google { background-position:-146px 0; }
+#head .contact { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/ico_phone.png) no-repeat 4px 0; padding:0 0 0 20px; height:18px; line-height:17px; }
+#head .contact strong { color:#fff; font-weight:normal; font-family:'ProximaNova-Bold'; }
+#header { background:#fff; float:left; width:100%; box-shadow:0 0 10px rgba(0,0,0,.5); position:relative; z-index:100; }
+#header .logo { float:left; display:block; padding:0; cursor:pointer; }
+#header .logo .imglogo{ margin:53px 0; }
+#header .logo .imglogo img{ margin:0; }
+#header .logo .logotext { display:block; text-transform:uppercase; color:#1289bb; font-size:32px; line-height:30px; margin:45px 0 30px 0; padding:0 0 1px; font-family:'ProximaNova-SemiBold'; }
+#header .logo .logotext a { color:#1289bb; }
+#header .logo .logotext a:hover { text-decoration:none; border-bottom:2px solid #1289bb; border-top:2px solid #1289bb; }
+#header .logo .imglogo a:hover{ border:none; }
+#header .logo h3{ margin:10px 0 0 0; padding:0; font-size:15px; font-family:"ProximaNova-Regular"; color:#555; }
+#header .logo .imglogomob{ display:none; }
+
+
+/* NAVIGATION
+------------------------------------------------------------------------------*/
+#menu { float:right; display:block; }
+#menu li { float:left; text-align:center; padding:0 0 0 32px; height:146px; z-index:99; position:relative; }
+#menu li ul { position:absolute; top:146px; left:-8px; display:none; border:1px solid #c4c4c4; width:265px; background-color:#fff; z-index:1000; box-shadow:0 0 13px #000; }
+#menu li ul ul { display:none; top:-1px; left:265px; z-index:89; }
+#menu li ul li { border-bottom:1px solid #c4c4c4; padding:0; z-index:99; background:#fff; position:relative; float:none; display:block; height:auto; }
+#menu li ul li a { z-index:99; }
+#menu li ul li li a { z-index:98; }
+#menu li ul li a { padding:14px 26px; text-align:left; position:relative; color:#5d5d5d; float:none; display:block; line-height:15px; font-size:13px; }
+#menu li ul li li { position:static; }
+#menu li ul li li a { position:static; }
+#menu li ul li.withsub>a:after { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/bg_submenu.png) no-repeat 0 100%; height:9px; width:6px; position:absolute; top:0; right:0; margin:17px 23px; content:""; }
+#menu li ul li:hover > a,
+#menu li ul li a:hover { z-index:99;
+text-decoration:none; }
+#menu li ul li:hover > a:after,
+#menu li ul li a:hover:after { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/bg_submenu.png) no-repeat; }
+#menu li:hover > ul { display:block; }
+#menu > ul > li:after { content:""; position:absolute; bottom:0; left:40px; height:40px; z-index:1001; background:#fff; }
+#menu > ul > li > a { float:left; color:#3b3f43; text-transform:uppercase; padding:53px 20px 0; margin:0 0 0 -40px; position:relative; z-index:1002; height:87px; font-family:"ProximaNova-SemiBold"; font-size:14px; }
+#menu > ul > li:hover > a { text-decoration:none; border-bottom:6px solid #008ed4;
+background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEyNSAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U4ZThlOCIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTI1IiBoZWlnaHQ9IjE0MCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
+background-image:-moz-linear-gradient(bottom, #e8e8e8 0%, #fff 100%);
+background-image:-o-linear-gradient(bottom, #e8e8e8 0%, #fff 100%);
+background-image:-webkit-linear-gradient(bottom, #e8e8e8 0%, #fff 100%);
+background-image:linear-gradient(bottom, #e8e8e8 0%, #fff 100%); }
+#menu > ul > li > a span { text-transform:none; display:block; font-weight:normal; line-height:20px; font-size:14px; color:#5e5e5e; font-family:"ProximaNova-Regular"; }
+
+
+/* CONTENT
+------------------------------------------------------------------------------*/
+#featured-image { background-repeat:no-repeat; background-position:50% 50%; background-size:cover; clear:both; }
+#featured-image .container { height:530px; position:relative; }
+#featured-image .contact-form { position:absolute; top:68px; padding:20px 3% 25px 3%; width:28%; background-color:#fff; box-shadow:0 0 10px rgba(0,0,0,.75); right:0; }
+#featured-image .contact-form h3 { color:#3b4043; font-size:28px; line-height:30px; font-family:'ProximaNova-SemiBold'; text-transform:uppercase; padding:8px 0 19px; }
+#featured-image .contact-form p { font-size:13px; padding:0 0 28px; line-height:18px; }
+#featured-image .contact-form form p { font-size:12px; padding:0 0 8px; margin:0 -10px 0 0; line-height:18px; }
+#featured-image .contact-form textarea { color:#727272; font-family:'ProximaNova-SemiBold'; font-size:13px; line-height:20px; padding:8px; height:111px; margin:0 0 15px; border:2px solid #d3d3d3; border-radius:3px; background:#fff; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; width:100%; }
+#featured-image .contact-form input[type=text] { color:#727272; font-family:'ProximaNova-SemiBold'; font-size:13px; padding:8px; line-height:15px; margin:0 0 15px; border:2px solid #d3d3d3; border-radius:3px; background:#fff; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; width:100%; }
+#featured-image .contact-form textarea.required,
+#featured-image .contact-form input[type=text].required{ border-color:#E55E48; }
+
+#featured-image .contact-form textarea:focus, #featured-image .contact-form input[type=text]:focus { outline:0; border:1px solid #0089bd; padding:9px; color:#000; box-shadow:0 0 5px rgba(0,142,212,.3); }
+#featured-image .contact-form input[type=submit] { color:#fff; font-size:18px; font-weight:normal; font-family:'ProximaNova-Bold'; width:100%; -webkit-appearance:none; border-radius:0; text-align:center; line-height:normal; padding:15px 0; border:0; margin:0 0 14px; border-radius:3px; background-color:#e55e48; text-shadow:0 -1px 1px rgba(0, 0, 0, 0.2); }
+#featured-image .contact-form input[type=submit]:hover { background-color:#e96d55 }
+#featured-image .caption { position:absolute; bottom:60px; left:0; width:64%; }
+#featured-image .caption h1 { color:#fff; padding:10px 15px; line-height:39px; margin:0 0 5px; font-size:36px; float:left; text-transform:none; text-shadow:0 1px 3px rgba(0,0,0,.25); background:rgba(23, 144, 210, .8); }
+#featured-image .caption a { text-decoration:none }
+#featured-image .caption h2 { color:#fff; text-transform:none; float:left; padding:10px 15px; line-height:32px; clear:both; font-size:30px; text-shadow:0 1px 0px rgba(0,0,0,.25); background:rgba(23, 144, 210, .8); }
+.flexslider { position:relative; zoom:1;}
+.flex-viewport { max-height:2000px; -webkit-transition:all 1s ease; -moz-transition:all 1s ease; transition:all 1s ease; box-shadow:0 2px 3px rgba(0,0,0,.1); border:1px solid #dddfe1;}
+.gallery-size-thumbnail .flex-viewport { display:none; }
+.text-box { background:#fff; padding:48px 0 60px; overflow:hidden;}
+.text-box h2 { font-size:30px; padding:0 0 10px;}
+.text-box h3 { font-size:15px; padding:0;}
+.text-box .col { float:left; width:30%; padding:0 3.3% 0 0;}
+.text-box .col p { margin:0 0 20px}
+.text-box .col:last-child { padding:0}
+.testimonials-box { padding:78px 0; background-color:#f4f4f4; box-shadow:inset 0 2px 3px rgba(0,0,0,.25);}
+.testimonials-box h2 { font-size:30px; text-transform:uppercase; font-family:'ProximaNova-SemiBold'; padding:0 0 15px; }
+.testimonials-box h3 { font-size:15px; padding:0 0 38px;}
+.testimonials-box p { margin:0 0 20px}
+.testimonials-box .vc_row-fluid.testimonial-section,
+.testimonials-box section { padding:0; position:relative; border:1px solid #dfe0dc; border-top:0; background-color:#fff; box-shadow:0 2px 3px rgba(147,158,164,.17); overflow:hidden;}
+.testimonials-box article { float:left; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; padding:30px 30px 35px; border-left:1px solid #dfe0dc; width:100%; }
+.testimonials-box article.first { border:0}
+.testimonials-box article img.avatar { float:left; width:81px; margin:0 20px 0 0; height:81px; border-radius:40px;}
+.testimonials-box article blockquote { color:#656565; line-height:21px; overflow:hidden; padding:4px 0 0; font-size:14px;}
+.testimonials-box article blockquote cite { display:block; padding:0;}
+.testimonials-box article blockquote cite strong { display:block; font-family:'ProximaNova-SemiBold'; padding:0 0 4px;}
+.testimonials-box .testimonial-section:after,
+.testimonials-box section:after { content:""; position:absolute; top:0; border-left:1px solid #dfe0dc; bottom:0; left:50%;}
+.projects-box { background:#fff; padding:78px 0; box-shadow:inset 0 2px 3px rgba(0,0,0,.25);}
+.projects-box .flex-control-nav{ display:none; }
+.flexslider { padding:94px 0 9px}
+.flexslider .slides li { float:left; color:#5d5d5d; width:320px; font-size:13px; position:relative; background:#000;}
+.flexslider .slides li a:hover { text-decoration:none}
+.flexslider .slides li a .eye { position:absolute; top:0; left:0; width:100%; height:90%; content:""; z-index:8; margin:0; padding:0; -webkit-transition:all .5s ease-in-out; -moz-transition:all .5s ease-in-out; -o-transition:all .5s ease-in-out; -ms-transition:all .5s ease-in-out; transition:all .5s ease-in-out; transform:rotate(0deg) scale(); -webkit-transform:rotate(0deg) scale(); -moz-transform:rotate(0deg) scale(); -o-transform:rotate(0deg) scale(); -ms-transform:rotate(0deg) scale(); background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/ico_eye.png) no-repeat 50% 50%; opacity:0; border-right:none; filter: alpha(opacity=0); zoom: 1;}
+.flexslider .slides li a:hover .eye { opacity:1; filter: alpha(opacity=100); zoom: 1; transform:rotate(720deg) scale(1); -webkit-transform:rotate(720deg) scale(1); -moz-transform:rotate(720deg) scale(1); -o-transform:rotate(720deg) scale(1); -ms-transform:rotate(720deg) scale(1);}
+.flexslider .slides li span { padding:9px 20px; background:#fff; display:block; border-right:1px solid #dddfe1;}
+.flexslider .slides li img { display:block; height:auto; -webkit-transition:all .5s ease-in-out; -moz-transition:all .5s ease-in-out; -o-transition:all .5s ease-in-out; -ms-transition:all .5s ease-in-out; transition:all .5s ease-in-out; width:320px;}
+.flexslider .slides li a { color:#5d5d5d; display:block;}
+.flexslider .slides li a:hover img { opacity:0.5; filter: alpha(opacity=50); zoom: 1;}
+.projects-box h2 { font-size:30px; padding:0 0 18px; text-align:center;}
+.projects-box h3 { text-align:center; font-size:15px;}
+.flex-direction-nav { position:absolute; top:38px; left:0; right:0; height:1px; text-align:center; background:#e0e0e0;}
+.single .flex-direction-nav{ display:none; }
+.home .flex-control-nav{ display:none; }
+.flex-direction-nav li { display:inline-block; position:relative; top:-28px; background:#fff; padding:0 12px;}
+.flex-direction-nav a { display:inline-block; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/bg_paging.png) no-repeat; width:28px; height:27px; font-size:0; line-height:0; -webkit-transition:none; -moz-transition:none; -o-transition:none; -ms-transition:none; transition:none;}
+.flex-direction-nav a.flex-prev { margin:0 -12px 0 0}
+.flex-direction-nav a.flex-next { background-position:100% 0; margin:0 0 0 -12px;}
+.flex-direction-nav a:hover { background-position:0 -27px}
+.flex-direction-nav a.flex-next:hover { background-position:100% -27px}
+.flex-direction-nav a:active { background-position:0 -54px}
+.flex-direction-nav a.flex-next:active { background-position:100% -54px}
+.blue-box{ background:#018fd5; padding:60px 0; overflow:hidden;}
+.blue-box .container { padding:0; overflow:hidden;}
+.blue-box section { overflow:hidden; margin-right:-1px; content:"";}
+.blue-box article { float:left; padding:0 0 60px 0; color:#fff; margin:0 0 40px 0; }
+.blue-box article:last-child { padding:0}
+.blue-box article h2 { color:#fff; line-height:28px; padding:9px 0 0; text-transform:none; font-size:24px; text-shadow:0 1px 1px rgba(0, 0, 0, 0.25); margin:0 0 20px 65px;}
+.blue-box article p { line-height:21px; font-family:'ProximaNova-SemiBold'; margin:0 0 20px 65px; color:#e6f6ff; text-shadow:0 1px 1px rgba(0, 0, 0, 0.1); clear:both;}
+.blue-box article p a { color:#fff}
+.blue-box article .number { float:left; border:3px solid #fff; padding:0; border-radius:50px; margin:0 10px 15px 0; font-family:'ProximaNova-SemiBold'; line-height:35px; font-size:21px; width:40px; height:40px; text-align:center;}
+.blue-box article .btn-more { float:left; position:relative; margin:0; border-radius:3px; padding:8px 23px 8px 12px; color:#fff; text-decoration:none; line-height:normal; font-family:"ProximaNova-SemiBold"; font-size:15px; background-color:#0e7ab5;}
+.blue-box article .btn-more:after { position:absolute; top:1px; right:5px; margin:12px 6px; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/ico_more.png) no-repeat; height:8px; width:6px; content:"";}
+.blue-box .cta { clear:both; text-align:center;}
+.blue-box article .btn-more:hover { background-color:#006aa1}
+.video-box { background:#1790d2; line-height:27px; border-bottom:1px solid #45a6db;}
+.video-box:hover { background:#0089cd}
+.video-box a { padding:47px 0; color:#fff; text-decoration:none; display:block;}
+.video-box h2 { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/ico_play.png) no-repeat 0 1px; padding:0 0 0 80px; color:#fff; min-height:60px; font-size:24px; text-transform:none; text-shadow:0 1px 1px rgba(0,0,0,.25); width:55%; }
+
+/*TEXT AREA*/
+.text-area { color:#5e5e5e; font:13px/24px Arial, Helvetica, sans-serif; border-bottom:1px solid #cdcdcd; padding:0 9999px 81px; margin:0 -9999px 27px; }
+.text-area .wpb_content_element { margin-bottom:0 }
+.text-area h2 { color:#383435; font:24px/26px 'ProximaNova-ExtraBold', sans-serif; margin:0 0 4px; text-transform:uppercase; text-align:center; }
+.text-area .ttl { font:15px/17px Arial, Helvetica, sans-serif; color:#383435; text-align:center; display:block; padding:0 0 45px; }
+.text-area .txt-holder { margin:0 0 0 -30px; overflow:hidden; }
+.text-area .txt-holder .txt-col { margin:0 0 0 30px; float:left; width:300px; }
+.text-area .txt-holder .txt-col p { margin:0 }
+
+/*CASES*/
+.cases { background:#f0f0f0; position:relative; padding:59px 9999px 60px; margin:0 -9999px 60px; }
+.mask-top { position:absolute; top:0; left:50%; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/mask-001.gif) no-repeat; width:59px; height:31px; margin:0 0 0 -30px; }
+.cases .mask-bottom { position:absolute; bottom:-29px; left:50%; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/mask-002.gif) no-repeat; width:58px; height:29px; margin:0 0 0 -31px; }
+.cases h2 { padding-bottom:3px; margin:0; text-align:center; }
+.cases .sub-title { text-align:center; padding:0 0 33px; display:block; font:15px/19px Arial, Helvetica, sans-serif; }
+.cases ul { padding:0; list-style:none; margin:0; width:9999px; }
+.cases ul:after { clear:both; content:''; display:block; }
+.cases .slideset { position:relative; width:100%; }
+.cases .wrap { width:100%; padding:0 0 20px; margin:0; position:relative; }
+.cases ul > li { float:left; -moz-box-shadow:0 3px 15px rgba(0,0,0,0.25); -webkit-box-shadow:0 3px 15px rgba(0,0,0,0.25); box-shadow:0 3px 15px rgba(0,0,0,0.25); background:#fff; text-align:center; margin:0 30px 0 0; color:#5e5e5e; font:13px/16px Arial, Helvetica, sans-serif; padding:0 0 24px; }
+.cases ul > li .img img { vertical-align:top; float:left; }
+.cases ul > li .img { height:140px; overflow:hidden; padding:0 0 21px; position:relative; margin-bottom:21px; }
+.cases ul > li .img .slides { display:block }
+.cases .direction-nav { position:absolute; top:-64px; right:-2px; margin:0; padding:0; list-style:none; overflow:hidden; width:auto; }
+.cases .direction-nav li { float:left; padding:0 0 0 16px; background:none; box-shadow:none; margin:0; }
+.cases .direction-nav li a { display:block; text-indent:-9999px; overflow:hidden; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/sprite-btns-001.png) no-repeat; height:29px; width:20px; }
+.cases .direction-nav li .prev:hover { background-position:0 -29px }
+.cases .direction-nav li .next { background-position:-36px 0 }
+.cases .direction-nav li .next:hover { background-position:-36px -29px }
+.cases ul > li h3 { margin:0; color:#000; padding:0 0 10px; }
+.cases ul > li h3 a { text-decoration:none; color:#353535; font-size: 16px; }
+.cases ul > li h3 a:hover { text-decoration:underline }
+.cases ul > li p { margin:0 }
+.cases .slides .frame { width:301px; height:161px; overflow:hidden; position:relative; }
+.cases .flex-control-nav { position:absolute; margin:0; padding:0; list-style:none; overflow:hidden; top:18px; right:13px; }
+.cases .flex-control-nav li { float:left; padding:0 0 0 7px; }
+.cases .flex-control-nav li a { cursor:pointer; display:block; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/sprite-btns-003.png) no-repeat; width:8px; height:7px; text-indent:-9999px; overflow:hidden; }
+.cases .flex-control-nav li .flex-active, .cases .flex-control-nav li a:hover { background-position:0 -7px }
+.cases .slides li { padding:0; margin:0; }
+
+/* FOOTER
+------------------------------------------------------------------------------*/
+#footer { background:#000; padding:69px 0 35px; color:#555; font:13px/17px arial !important; clear:both; }
+#footer h4 { margin:0 0 20px; font:bold 14px/18px 'ProximaNova', sans-serif; color:#f4f4f4; text-transform:uppercase; }
+#footer a { color:#666; text-decoration:none; }
+#footer a:hover { color:#999; }
+#footer .col { float:left; width:23%; margin:0 2% 0 0; overflow:auto; }
+#footer .col ul { margin:0; padding:0; list-style:none; }
+#footer .col ul li { padding:0 0 4px; }
+#footer .col ul li a { color:#666; text-decoration:none; }
+#footer .col ul li a:hover { color:#b7b7b7; }
+#footer .col dl { margin:0; overflow:hidden; padding:2px 1px 0; }
+#footer .col dl dt { float:left; margin:0; width:80px; padding-bottom:6px; }
+#footer .col dl dd { margin:0; overflow:hidden; padding-bottom:6px; }
+#footer .col address { font-style:normal; padding:0; margin:0 0 20px; }
+#footer .col address span { display:block; padding-bottom:4px; }
+#footer .col address .phone { padding:20px 0 0; }
+#footer .ttl { display:block; text-align:center; font:12px/16px 'ProximaNova-Bold', sans-serif; text-transform:uppercase; }
+#footer .ttl img { vertical-align:middle; margin-top:-1px; }
+.w1-ttl { width:100%; overflow:hidden; position:relative; padding:80px 0 0; clear:both; }
+#footer .ttl { float:left; left:50%; position:relative; margin:0; padding:0; list-style:none; font:12px/16px 'ProximaNova-Bold', sans-serif; text-transform:uppercase; }
+#footer .ttl li { float:left; left:-50%; position:relative; }
+#footer .ttl .logo { text-indent:-9999px; overflow:hidden; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/ico_fog.png) no-repeat; width:51px; height:51px; float:left; cursor:pointer; margin:-17px 0 0; }
+#footer .ttl .logo:hover { background-position:0 -51px; }
+#footer .widget { margin:0 0 20px 0; }
+
+/* BREADCRUMBS
+------------------------------------------------------------------------------*/
+.breadcrumbs { margin:0; padding:25px 0 20px; list-style:none; overflow:hidden;  }
+.breadcrumbs li { font:11px/13px Arial, Helvetica, sans-serif; color:#383435; padding:0 10px 0 17px; float:left; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/bul-07.png) no-repeat 0 2px; white-space:nowrap; }
+.breadcrumbs li:first-child { padding-left:0; background:none; }
+.breadcrumbs li a { color:#9d9c9c; text-decoration:none; }
+.breadcrumbs li a:hover { text-decoration:none; color:#1790D2; }
+
+/* PAGINATION
+------------------------------------------------------------------------------*/
+.pagination { padding:15px 0; float:left; width:100%; clear:both; border-top:1px solid #eee; font:15px/16px 'ProximaNova-Bold', sans-serif; text-transform:uppercase; }
+.pagination a { color:#ddd; text-decoration:none; }
+.pagination a:hover { color:#1790D2; text-decoration:none; }
+.pagination .prev { float:left; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/btn-prev1.png) no-repeat; padding:0 0 0 28px; line-height:21px; }
+.pagination .next { float:right; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/btn-next1.png) no-repeat 100% 0; padding:0 28px 0 0; line-height:21px; }
+.pagination .prev:hover { background-position:0 -21px }
+.pagination .next:hover { background-position:100% -21px }
+.pagination ul { margin:0; padding:0 36px 0 0; list-style:none; text-align:center; overflow:hidden; }
+.pagination ul li { display:inline; padding:0 8px 0 0; }
+.pagination ul .active a, .pagination ul li a:hover { color:#383435 }
+.pagination .mobile-nav { display:none }
+
+
+/* PERSON
+------------------------------------------------------------------------------*/
+.person { padding:0 9999px;
+	margin:0 -9999px;
+	background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YwZjBmMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI4JSIgc3RvcC1jb2xvcj0iI2YwZjBmMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMzJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM4JSIgc3RvcC1jb2xvcj0iI2U5ZThlOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM4JSIgc3RvcC1jb2xvcj0iI2VhZWFlYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM4JSIgc3RvcC1jb2xvcj0iI2U4ZThlOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM5JSIgc3RvcC1jb2xvcj0iI2U5ZThlOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQyJSIgc3RvcC1jb2xvcj0iI2U1ZTVlNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ4JSIgc3RvcC1jb2xvcj0iI2UyZTFlNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ5JSIgc3RvcC1jb2xvcj0iI2U0ZTNlNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ5JSIgc3RvcC1jb2xvcj0iI2UxZTFlMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjYwJSIgc3RvcC1jb2xvcj0iI2UxZTFlMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc5JSIgc3RvcC1jb2xvcj0iI2RkZGJkZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijg2JSIgc3RvcC1jb2xvcj0iI2Q4ZDdkOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkzJSIgc3RvcC1jb2xvcj0iI2NlY2RjYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjYWMzYzMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background:-moz-linear-gradient(top,  #f0f0f0 0%, #f0f0f0 28%, #eeeeee 33%, #e9e8e9 38%, #eaeaea 38%, #e8e8e8 38%, #e9e8e9 39%, #e5e5e5 42%, #e2e1e4 48%, #e4e3e4 49%, #e1e1e2 49%, #e1e1e3 60%, #dddbde 79%, #d8d7d8 86%, #cecdcc 93%, #cac3c3 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f0f0), color-stop(28%,#f0f0f0), color-stop(33%,#eeeeee), color-stop(38%,#e9e8e9), color-stop(38%,#eaeaea), color-stop(38%,#e8e8e8), color-stop(39%,#e9e8e9), color-stop(42%,#e5e5e5), color-stop(48%,#e2e1e4), color-stop(49%,#e4e3e4), color-stop(49%,#e1e1e2), color-stop(60%,#e1e1e3), color-stop(79%,#dddbde), color-stop(86%,#d8d7d8), color-stop(93%,#cecdcc), color-stop(100%,#cac3c3));
+	background:-webkit-linear-gradient(top,  #f0f0f0 0%,#f0f0f0 28%,#eeeeee 33%,#e9e8e9 38%,#eaeaea 38%,#e8e8e8 38%,#e9e8e9 39%,#e5e5e5 42%,#e2e1e4 48%,#e4e3e4 49%,#e1e1e2 49%,#e1e1e3 60%,#dddbde 79%,#d8d7d8 86%,#cecdcc 93%,#cac3c3 100%);
+	background:-o-linear-gradient(top,  #f0f0f0 0%,#f0f0f0 28%,#eeeeee 33%,#e9e8e9 38%,#eaeaea 38%,#e8e8e8 38%,#e9e8e9 39%,#e5e5e5 42%,#e2e1e4 48%,#e4e3e4 49%,#e1e1e2 49%,#e1e1e3 60%,#dddbde 79%,#d8d7d8 86%,#cecdcc 93%,#cac3c3 100%);
+	background:-ms-linear-gradient(top,  #f0f0f0 0%,#f0f0f0 28%,#eeeeee 33%,#e9e8e9 38%,#eaeaea 38%,#e8e8e8 38%,#e9e8e9 39%,#e5e5e5 42%,#e2e1e4 48%,#e4e3e4 49%,#e1e1e2 49%,#e1e1e3 60%,#dddbde 79%,#d8d7d8 86%,#cecdcc 93%,#cac3c3 100%);
+	background:linear-gradient(to bottom,  #f0f0f0 0%,#f0f0f0 28%,#eeeeee 33%,#e9e8e9 38%,#eaeaea 38%,#e8e8e8 38%,#e9e8e9 39%,#e5e5e5 42%,#e2e1e4 48%,#e4e3e4 49%,#e1e1e2 49%,#e1e1e3 60%,#dddbde 79%,#d8d7d8 86%,#cecdcc 93%,#cac3c3 100%);
+	-pie-background:linear-gradient( #f0f0f0 0%,#f0f0f0 28%,#eeeeee 33%,#e9e8e9 38%,#eaeaea 38%,#e8e8e8 38%,#e9e8e9 39%,#e5e5e5 42%,#e2e1e4 48%,#e4e3e4 49%,#e1e1e2 49%,#e1e1e3 60%,#dddbde 79%,#d8d7d8 86%,#cecdcc 93%,#cac3c3 100%);
+	position:relative;
+	overflow:hidden;
+	}
+.person .mask1 { width:100% }
+.person .img { width:100%; }
+.person .img img { width:100%; height:100%; max-width:100%; max-height:100%; }
+
+.person .mainimg { width:100%; text-align:center; }
+.person .mainimg img { height:100%; max-width:100%; max-height:100%; }
+
+/* TEAM
+------------------------------------------------------------------------------*/
+.team { padding:40px 9999px 58px; margin:0 -9999px; }
+.team .headline { overflow:hidden; padding:0 0 20px; }
+.team .headline h1, .team .headline h2 { margin:0 1px; float:left; }
+.team .headline h1 span, .team .headline h2 span { display:block; font:15px/24px arial, helvetica, sans-serif; text-transform:none; color:#666;  }
+.team .headline .sel { float:right; width:281px; }
+.team .holder { margin:0 -10px 0 -31px }
+.team .holder .item { display:inline-block; width:300px; background:#fff; -moz-box-shadow:0 7px 10px rgba(0,0,0,0.25); -webkit-box-shadow:0 7px 10px rgba(0,0,0,0.25); box-shadow:0 7px 10px rgba(0,0,0,0.25); text-align:center; padding:0 0 24px; margin:0 0 30px 31px; vertical-align:top; position:relative; }
+.team .holder .item .img {
+	background:#eeeeef;
+	background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjExJSIgc3RvcC1jb2xvcj0iI2U2ZTVlNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjE5JSIgc3RvcC1jb2xvcj0iI2UyZTJlMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjcxJSIgc3RvcC1jb2xvcj0iI2RjZGJkZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijg2JSIgc3RvcC1jb2xvcj0iI2Q2ZDVkNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjY2M4YzciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background:-moz-linear-gradient(top,  #eeeeef 0%, #e6e5e6 11%, #e2e2e3 19%, #dcdbdd 71%, #d6d5d5 86%, #ccc8c7 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeef), color-stop(11%,#e6e5e6), color-stop(19%,#e2e2e3), color-stop(71%,#dcdbdd), color-stop(86%,#d6d5d5), color-stop(100%,#ccc8c7));
+	background:-webkit-linear-gradient(top,  #eeeeef 0%,#e6e5e6 11%,#e2e2e3 19%,#dcdbdd 71%,#d6d5d5 86%,#ccc8c7 100%);
+	background:-o-linear-gradient(top,  #eeeeef 0%,#e6e5e6 11%,#e2e2e3 19%,#dcdbdd 71%,#d6d5d5 86%,#ccc8c7 100%);
+	background:-ms-linear-gradient(top,  #eeeeef 0%,#e6e5e6 11%,#e2e2e3 19%,#dcdbdd 71%,#d6d5d5 86%,#ccc8c7 100%);
+	background:linear-gradient(to bottom,  #eeeeef 0%,#e6e5e6 11%,#e2e2e3 19%,#dcdbdd 71%,#d6d5d5 86%,#ccc8c7 100%);
+	-pie-background:linear-gradient( #eeeeef 0%,#e6e5e6 11%,#e2e2e3 19%,#dcdbdd 71%,#d6d5d5 86%,#ccc8c7 100%);
+	position:relative;
+	height:161px;
+	margin:0 0 21px;
+}
+.team .holder .item .img img { vertical-align:top }
+.team .holder .item .img .name { position:absolute; top:25px; left:16px; }
+.team .holder .item .img .name.name1 { left:15px; top:15px; }
+.team .holder .item .img .name.name2 { left:14px; top:24px; }
+.team .holder .item .img .name.name3 { left:16px; top:25px; }
+.team .holder .item .img .name.name4 { left:15px; top:25px; }
+.team .holder .item .img .name.name5 { left:13px; top:24px; }
+.team .holder .item .img .photo { position:absolute; bottom:0; right:0; }
+.team .holder .item .img .photo.photo1 { right:38px }
+.team .holder .item .img .photo.photo2 { right:31px }
+.team .holder .item .img .photo.photo3 { right:9px }
+.team .holder .item .img .photo.photo4 { right:4px }
+.team .holder .item span { display:block; font:13px/15px Arial, Helvetica, sans-serif; color:#5e5e5e; }
+.team .holder .item h3 { padding:0 0 10px; }
+.team .holder .item h3 a { text-decoration:none; color:#353535; font-size:16px; }
+.team .holder .item h3 a:hover { text-decoration:underline }
+.team .headline .select-form { float:right; width:281px; }
+
+/*member page*/
+.about { clear:both; float:left; width:100%; padding:40px 0; }
+
+/*.about .sidebar .contact .social { float:left; padding:22px 0 0; margin:0 -5px; }*/
+.about aside { width:25%; }
+.about aside .tweetbox { margin:25px 0 0 0 }
+.about .sidebar .tweet { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/bg-tweet.png) no-repeat 4px 2px; padding:0 25px 0 40px; font:13px/24px georgia, sans-serif; color:#010303; }
+.about .sidebar .tweet em { display:block; font-style:normal; }
+.about .holder { width:70%; float:left; }
+.about p { margin:0 0 24px }
+.intro { font:21px/30px 'ProximaNova-SemiBold', sans-serif; color:#353535; padding:25px 30px 5px 30px; background:#eee; text-shadow:0 1px 0 #fff; margin:0 0 25px; border-top:5px solid #ccc; }
+
+/*portfolio-item page*/
+.two-columns { padding:0 0 30px; width:100%; clear:both; text-align:center; }
+.two-columns:after { clear:both; content:''; display:block; }
+.two-columns .col { float:right; width:100%; margin:0; }
+.two-columns .col p { margin:0 0 15px }
+.two-columns .col ul { margin:-82px 0 0 -1px; padding:0 0 60px; list-style:none; overflow:hidden; font:18px/24px 'ProximaNova-SemiBold', sans-serif; color:#ddd; text-transform:uppercase; }
+.two-columns .col ul li:first-child { float:left; background-position:0 1px; }
+.two-columns .col ul li:first-child a { padding:0 0 0 28px }
+.two-columns .col ul li.prev:hover { background-position:0 -55px }
+.two-columns .col ul li { float:right; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/sprite-btns-002.png) no-repeat 100% -27px; }
+.two-columns .col ul li:hover { background-position:100% -86px }
+.two-columns .col ul li a { color:#ddd; text-decoration:none; padding:0 28px 0 0; }
+.two-columns h1 { width:100%; float:left; }
+
+/*gallery2*/
+.gallery2 { overflow:hidden; position:relative; margin:0 0 42px; }
+.gallery2 .mask1 { width:100% }
+.gallery2 ul { margin:0; padding:0; list-style:none; width:100%; overflow:hidden; }
+.gallery2 ul li { display:block }
+.gallery2 ul li img { vertical-align:top; width:100%; max-width:100%; }
+.gallery2 .flex-control-nav { position:absolute; margin:0; padding:0; list-style:none; overflow:hidden; bottom:20px; right:18px; overflow:hidden; }
+.gallery2 .flex-control-nav li { float:left; padding-left:12px; }
+.gallery2 .flex-control-nav li a { display:block; text-indent:-9999px; overflow:hidden; background:#fff; cursor:pointer; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/sprite-pager.png) no-repeat; width:14px; height:13px; }
+.gallery2 .flex-control-nav .flex-active, .gallery2 .flex-control-nav li a:hover { background-position:0 -14px }
+.gallery2 .flex-direction-nav { position:absolute; top:19px; right:19px; margin:0; padding:0; list-style:none; overflow:hidden; z-index:999; width:auto; }
+.gallery2 .flex-direction-nav li { float:left; padding:0 0 0 21px; background:none; box-shadow:none; }
+.gallery2 .flex-direction-nav li a { display:block; text-indent:-9999px; overflow:hidden; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/sprite-btns-001.png) no-repeat; height:29px; width:20px; }
+.gallery2 .flex-direction-nav li .flex-prev:hover { background-position:0 -29px }
+.gallery2 .flex-direction-nav li .flex-next { background-position:-36px 0 }
+.gallery2 .flex-direction-nav li .flex-next:hover { background-position:-36px -29px }
+
+/*theme-info */
+.theme-info { overflow:hidden; padding:0 1px 56px; }
+.theme-info .holder { width:70%; float:left; }
+.theme-info .holder p { margin:0 0 24px }
+.theme-info .rightcol { float:right; width:25%; }
+.theme-info .links { float:left; margin:0 0 20px 0; padding:6px 0 0 0; list-style:none; font-size:14px; line-height:16px; }
+.theme-info .links li { overflow:hidden }
+.theme-info .links li a { float:left; padding:3px 0 3px 30px; color:#201c1c; text-decoration:none; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/ico-002.png) no-repeat 0 1px; }
+.theme-info .links li a:hover { text-decoration:underline }
+.cases.cases1 { padding-bottom:66px; margin-bottom:0; }
+.testimonialbox { float:left; clear:both; -moz-border-bottom-colors:none; -moz-border-left-colors:none; -moz-border-right-colors:none; -moz-border-top-colors:none; border-color:#EDEDED; border-image:none; border-style:solid; border-width:1px 0; width:100%; }
+.testimonialbox div { background:url("/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/bg-quote.png") no-repeat scroll 0 22px transparent; padding:20px 10px 30px 30px; }
+.testimonialbox q { color:#858585; display:block; font:italic 15px/24px Georgia,"Times New Roman",Times,serif; padding:0 0 30px; quotes:none; }
+.testimonialbox cite { color:#040404; display:block; font:12px/15px 'LatoBold'; }
+
+/*portfolio page*/
+.two-columns .col .link { overflow:hidden; padding:0 0 7px; }
+.two-columns .col .link a { color:#ed1c24; text-transform:uppercase; font:18px/22px 'ProximaNova-ExtraBold', sans-serif; padding-right:24px; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/arrow-002.png) no-repeat 100% 1px; text-decoration:none; float:left; }
+.two-columns .col .link a:hover { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/arrow-blue.png) no-repeat 100% 1px }
+
+/*featured*/
+.featured-holder { width:100%; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/bg-featured.jpg) repeat-x; margin-bottom:30px; position:relative; overflow:hidden; }
+.featured-frame { /*background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/img-006.jpg) no-repeat 100% 0;_NO__DOTCOMMA__AFTER__*/ }
+.featured-frame .featuredimg { margin:0 auto; position:absolute; height:421px; text-align:center; width:100%; }
+.featured-frame .featuredimg img { z-index:0 }
+.featured { width:100%; overflow:hidden; position:relative; height:421px; }
+.featured .mask1 { width:100% }
+.featured .holder { float:left; left:50%; position:relative; width:100%; z-index:100; }
+.featured .frame { float:left; left:-50%; position:relative; width:100%; padding:65px 0 0; color:#383435; text-align:center; }
+.mask-002 { position:absolute; top:-1px; left:50%; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/mask-top.png) no-repeat; width:58px; height:29px; margin-left:-29px; z-index:999; }
+.featured .frame .box { width:60%; margin:0 auto; }
+.featured .frame .box .subtitle { font:15px/19px 'ProximaNova-ExtraBold', sans-serif; text-transform:uppercase; color:#b7b6b6; display:block; padding:0 0 7px; }
+.featured .frame .box h2 { margin:0 0 6px; }
+.featured .frame .box p { margin:0 0 30px; font-size:15px; }
+.featured .frame .box .more { overflow:hidden }
+.featured .frame .box .more .btn { width:auto; padding:10px 15px!important; }
+
+
+/*gallery3*/
+.gallery3 { position:relative }
+.gallery3 ul { margin:0; padding:0; list-style:none; overflow:hidden; }
+.gallery3 ul li a { display:block }
+.gallery3 .flex-control-nav { position:absolute; margin:0; padding:0; list-style:none; overflow:hidden; top:18px; right:13px; }
+.gallery3 .flex-control-nav li { float:left; padding:0 0 0 7px; }
+.gallery3 .flex-control-nav li a { cursor:pointer; display:block; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/sprite-btns-003.png) no-repeat; width:8px; height:7px; text-indent:-9999px; overflow:hidden; }
+.gallery3 .flex-control-nav li .flex-active, .gallery3 .flex-control-nav li a:hover { background-position:0 -7px }
+
+/*contact page*/
+.contactcont { text-align:center; position:relative; }
+.contactcont h1 { margin:0 0 20px; text-transform:uppercase; }
+.contactcont p { margin:0 0 24px }
+.contactcont .block { padding:0 0 20px; }
+.form-holder { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/bg-form.jpg) no-repeat 50% 0; position:relative; margin-bottom:60px; overflow:hidden; }
+.contact-form { padding:0 40px 70px; width:639px; overflow:hidden; margin:0 auto; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/bg-contactform.png); position:relative; }
+.contact-form h2 { text-align:center; }
+.contact-form .holder { position:relative; padding:60px 0 0; margin:0 0; }
+.contact-form .area { padding:0 42px 30px; }
+.contact-form .area textarea { padding:12px 12px; margin:0 0 25px; width:526px; height:131px; overflow:auto; border:1px solid #c1c1c1; -moz-box-shadow:0 1px 2px rgba(0,0,0,0.15) inset; -webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15) inset; box-shadow:0 1px 2px rgba(0,0,0,0.15) inset; -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px; position:relative; font:13px/24px Arial, Helvetica, sans-serif; color:#383435; background:#fff; float:left; }
+.contact-form .rowa { padding:0 46px 21px 42px; text-align:center }
+.contact-form .txt { float:right; background:#fff; font:13px/16px Arial, Helvetica, sans-serif; color:#383435; border:1px solid #c1c1c1; -moz-box-shadow:0 1px 2px rgba(0,0,0,0.15) inset; -webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15) inset; box-shadow:0 1px 2px rgba(0,0,0,0.15) inset; -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px; padding:8px 12px 9px; margin:0 0 25px; height:16px; position:relative; width:234px; }
+.contact-form .area textarea.focus, .contact-form .txt.focus { -moz-box-shadow:0 2px 2px rgba(0,0,0,0.2); -webkit-box-shadow:0 2px 2px rgba(0,0,0,0.2); box-shadow:0 2px 2px rgba(0,0,0,0.2); border-color:#9b9b9b; }
+.contact-form .txt:first-child { float:left }
+.contact-form .text { font:13px/15px Arial, Helvetica, sans-serif; color:#383435; }
+.btn { color:#fff; font-size:18px; font-weight:normal; font-family:'ProximaNova-Bold'; width:100%; -webkit-appearance:none; border-radius:0; text-align:center; line-height:normal; display:inline-block; padding:10px 0 !important; border:0; margin:0 0 14px; border-radius:3px; background-color:#e55e48; text-shadow:0 -1px 1px rgba(0, 0, 0, 0.2); }
+.btn:hover { background-color:#e96d55; text-decoration:none; }
+.contact-form .rowa.btn-row { padding-top:16px }
+
+.contact-form .area textarea.required,
+.contact-form .txt.required{ border-color:#E55E48;}
+
+/*direction-form*/
+.direction-form { text-align:center; position:relative; padding-bottom:32px; }
+.direction-form h2 { margin:0; }
+.direction-form .sub-title { display:block; padding:0 0 49px; line-height:22px; }
+.direction-form p { margin:0 0 20px }
+.direction-form .rowa { width:360px; margin:0 auto; padding-bottom:52px; }
+.direction-form .rowa:after { clear:both; content:''; display:block; }
+.direction-form .rowa .txt { float:left; background:#fff; font:12px/13px arial, sans-serif; height:13px; padding:9px 12px 7px; color:#585a5c; border:1px solid #c1c1c1; -moz-box-shadow:0 2px 2px rgba(0,0,0,0.15) inset; -webkit-box-shadow:0 2px 2px rgba(0,0,0,0.15) inset; box-shadow:0 2px 2px rgba(0,0,0,0.15) inset; -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px; margin:0 20px 0 0; position:relative; width:294px; }
+.direction-form .rowa .btn { float:left; text-indent:-9999px; overflow:hidden; line-height:0; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/sprite-btns-001.png) no-repeat 100% 0; width:20px; height:29px; border:0; padding:0; }
+.direction-form #map { height:350px; width:100%; }
+.direction-form .rowa .btn:hover { background-position:100% -29px }
+.direction-form .map { position:relative }
+.direction-form .map:after { clear:both; content:''; display:block; }
+.direction-form .map .mask1 { left:0 }
+.direction-form .map .holder { position:relative; left:50%; float:left; }
+.direction-form .map .frame { width:100% }
+.direction-form .map img { vertical-align:top }
+.mask2 { left:0; position:absolute; bottom:0; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/mask-03.png) no-repeat 50% 0; width:100%; height:42px; }
+
+/*text-wrap*/
+.text-wrap { overflow:hidden; padding:0 9999px 76px; margin:0 -9999px 27px; font:13px/21px arial, sans-serif; color:#666; }
+.text-wrap h3 { margin:0 0 6px; }
+.text-wrap p { margin:0 0 21px }
+.text-wrap .col { float:right; width:25%; padding:0; }
+.text-wrap .col ul { margin:0; padding:0; list-style:none; }
+.text-wrap .holder { float:left; width:70%; }
+
+/*main*/
+#main { overflow:hidden; padding:0 9999px; margin:0 -9999px 27px; }
+
+/*content*/
+#content img { vertical-align:top; }
+#content .post { overflow:hidden; clear:both; margin:0 0 29px 0; }
+.blog #content .post { border-bottom:1px solid #EBEEF1; padding:0 0 25px; }
+#content .post .data { width:100%; padding:0; clear:both; }
+#content .post .data img { float:left; margin:0 20px 0 0; }
+#main #content .post .data ul { margin:0; padding:8px 0 0; list-style:none; float:left; }
+#content .post .data ul li { font:italic 11px/18px Arial, Helvetica, sans-serif; color:#5e5e5e; float:left; margin:0 15px 0 0; }
+#content .post .data ul li a:hover { text-decoration:underline }
+#content .post .data ul li strong { font-style:normal; padding-right:4px; }
+#content .post .info { width:100%; font:11px/18px Arial, Helvetica, sans-serif; color:#5e5e5e; }
+#content .post .info.audioblock { padding:3px 0 0 }
+#content .post h2 { color:#383435; }
+#content .post h2 a { color:#383435; }
+
+/*gallery4*/
+.block, .gallery4 { margin:0 0 29px 0; position:relative; }
+.block img { height:auto; max-width:100%; width:100%; }
+.gallery4 ul { margin:0; padding:0; list-style:none; }
+.gallery4 img,
+.gallery5 img{ width:100%; max-width:100%; height:100%; max-height:100%; }
+.gallery4 .flex-control-nav { position:absolute; margin:0; padding:0; list-style:none; overflow:hidden; top:20px; right:13px; }
+.gallery4 .flex-control-nav li { float:left; padding:0 0 0 6px; }
+.gallery4 .flex-control-nav li a { cursor:pointer; display:block; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/sprite-btns-003.png) no-repeat; width:8px; height:7px; text-indent:-9999px; overflow:hidden; }
+.gallery4 .flex-control-nav li .flex-active, .gallery4 .flex-control-nav li a:hover { background-position:0 -7px }
+#main .video { padding:0 0 0 }
+#content .post .audio { margin:-4px 0 16px }
+#content .post blockquote { margin:0 0 20px; background:#eff0f1; padding:20px 55px 22px 20px; }
+#content .post blockquote.inner { width:auto }
+#content .post blockquote q { display:block; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/ico-03.png) no-repeat 0 1px; padding:0 0 0 41px; font:15px/24px georgia, serif; color:#4b5b65; }
+#content .post .text { float:right; max-width:488px; font:11px/18px Arial, Helvetica, sans-serif; color:#5e5e5e; }
+
+/*aside*/
+aside h3 { /*margin:0 16px 19px 0;*/ margin:0 0 19px 0; color:#383435; font:14px/16px 'proxima_novabold', sans-serif; border-bottom:1px solid #ebeef1; text-transform:uppercase; padding:1px 0 13px; }
+aside ul { margin:0; padding:3px 0 39px; list-style:none; }
+aside ul li { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/bul-08.png) no-repeat 3px 2px; padding:0 0 7px 18px; color:#5e5e5e; font:12px/14px arial, sans-serif; }
+aside ul li:hover { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/bul-03.png) no-repeat 3px 2px }
+aside .tagcloud { color:#383435; font:12px/21px arial, sans-serif; padding:0 0 45px 2px; }
+aside .tagcloud a { margin:0 12px 0 0; }
+aside .categories { margin:0; padding:3px 0 27px; list-style:none; }
+aside .twitts { margin:0; padding:2px 0 0; list-style:none; }
+aside .twitts li { color:#5e5e5e; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/img-15.jpg) no-repeat 2px 4px; font:italic 13px/21px Georgia, serif; padding:0 0 25px 49px; }
+aside#sidebar .twitts li { font-style:italic }
+aside ul.twitts li:hover { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/img-15.jpg) no-repeat 2px 4px }
+aside .twitts li a { color:#1790d2; text-decoration:none; }
+aside .twitts li a:hover { text-decoration:underline; }
+aside .twitts li p { margin:0 }
+aside .twitts li .date { font:10px/12px Arial, Helvetica, sans-serif; color:#bbb; padding:5px 0 0; }
+.single-team-member .about .sidebar .tweet { padding: 0 0 0 40px; }
+aside .tweet_list{ padding-top:0; }
+aside .tweet_list li{ line-height:1.8; background-position:3px 5px; }
+aside ul.tweet_list li:hover { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/bul-03.png) no-repeat 3px 5px }
+
+/*post*/
+.audio { clear:both; width:100%; }
+.pages-holder:after { clear:both; content:''; display:block; }
+.gallery-holder { padding:0 }
+.gallery-holder .gallery5 { position:relative; padding:0 0 13px; }
+.gallery-holder .gallery5 ul { margin:0; padding:0; list-style:none; }
+.gallery-holder .gallery5 ul li img { vertical-align:top; width:100%; }
+.gallery5 .flex-control-nav { position:absolute; margin:0; padding:0; list-style:none; overflow:hidden; top:26px; right:12px; }
+.gallery5 .flex-control-nav li { float:left; padding:0 0 0 6px; }
+.gallery5 .flex-control-nav li a { cursor:pointer; display:block; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/sprite-btns-003.png) no-repeat; width:8px; height:7px; text-indent:-9999px; overflow:hidden; }
+.gallery5 .flex-control-nav li .flex-active, .gallery5 .flex-control-nav li a:hover { background-position:0 -7px }
+.gallery-holder .info-line { /*background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/img-08.jpg) no-repeat;*/ border-bottom:5px solid #f0f0f0; overflow:hidden; padding:0 0 17px 0; margin:0 0 39px; }
+.page-template-default .gallery-holder .info-line { background:none }
+.page-template-default .gallery-holder .info-line.nogallery { padding:0 0 0 52px }
+.gallery-holder .info-line img { vertical-align:top }
+.gallery-holder .info-line .ico { float:left; margin:0 17px 0 0; }
+.gallery-holder .info-line dl { margin:9px 0 0; float:left; font:11px/18px Arial, Helvetica, sans-serif; }
+.gallery-holder .info-line dt { font-weight:bold; color:#5e5e5e; float:left; margin:0 2px 0 0; }
+.gallery-holder .info-line dd { margin:0 31px 0 0; font-style:italic; float:left; }
+.gallery-holder .info-line .plugin { float:right; margin:9px 0 0 0; }
+#content p { margin:0 0 1em; }
+#content .reaction { border-top:1px solid #ebeef1; margin:50px 0 0; padding:41px 0 6px; clear:both; float:left; width:100%; }
+#main #content .reaction .comments li{ list-style:none; }
+#content .reaction .comments { margin:0; padding:24px 0 0; list-style:none; }
+#content .reaction .comments>li { overflow:hidden; padding:0 0 33px; }
+#content .reaction .comments>li .commentcontainer { overflow:hidden }
+#content .reaction .comments>li .photo { float:left; width:100px; height:100px; -webkit-border-radius:110px; -moz-border-radius:110px; border-radius:110px; position:relative; margin:0 42px 0 0; }
+#content .reaction .comments>li .holder { overflow:hidden; font:11px/21px Arial, Helvetica, sans-serif; color:#555; border-bottom:1px solid #ebeef1; padding:0 0 25px; }
+#content .reaction .comments>li .holder p { margin:0 }
+#content .reaction .comments>li .holder .author { color:#555; font:bold 12px/14px Arial, Helvetica, sans-serif; display:block; }
+#content .reaction .comments>li .holder .author a { text-decoration:none; color:#555; }
+#content .reaction .comments>li .holder .author a:hover { text-decoration:underline }
+#content .reaction .comments>li .holder .date { color:#5e5e5e; font:italic 11px/18px Arial, Helvetica, sans-serif; }
+#content .reaction .comments .reply { color:#383435; font:bold 11px/18px Arial, Helvetica, sans-serif; text-decoration:none; }
+#content .reaction .comments .reply:hover { text-decoration:underline }
+#main #content .reaction .comments>li ul { margin:0; padding:0 0 0 141px; list-style:none; }
+#content .reaction .comments>li ul li { padding-top:30px }
+#content .reaction .comments>li ul .photo { width:51px; height:51px; margin:0 19px 0 0; }
+#content .reaction .comments>li ul ul { padding:28px 0 0 71px }
+
+/*comment-form*/
+#content .comment-holder { padding:0; clear:both; }
+#content .comment-holder h2 { margin:0 0 20px }
+#content .comment-form { padding:0 }
+#content .comment-form .rowa { padding:0 0 30px }
+#content .comment-form .rowa:after { clear:both; content:''; display:block; }
+#content .comment-form .txt { float:left; background:#fff; font:13px/16px Arial, Helvetica, sans-serif; color:#383435; border:1px solid #c1c1c1; -moz-box-shadow:0 1px 2px rgba(0,0,0,0.15) inset; -webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15) inset; box-shadow:0 1px 2px rgba(0,0,0,0.15) inset; -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px; padding:8px 12px 9px; margin:0; height:16px; position:relative; width:274px; }
+#content .comment-form .align-r { float:right }
+#content .comment-form .area textarea { padding:3% 1% 1% 3%; margin:0; width:96%; height:131px; overflow:auto; border:1px solid #c1c1c1; -moz-box-shadow:0 1px 2px rgba(0,0,0,0.15) inset; -webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15) inset; box-shadow:0 1px 2px rgba(0,0,0,0.15) inset; -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px; position:relative; font:13px/24px Arial, Helvetica, sans-serif; color:#383435; background:#fff; float:left; position:relative; }
+.direction-form .rowa .txt.focus, #content .comment-form .area textarea.focus, #content .comment-form .txt.focus { -moz-box-shadow:0 2px 2px rgba(0,0,0,0.2); -webkit-box-shadow:0 2px 2px rgba(0,0,0,0.2); box-shadow:0 2px 2px rgba(0,0,0,0.2); position:relative; border-color:#9b9b9b; }
+#content .comment-form .rowa span { float:left; font:13px/15px Arial, Helvetica, sans-serif; padding:2px 0 0; }
+.searchbox { width:299px; margin:0 auto; }
+.searchbox .btn { float:right; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/sprite-submit2.png) no-repeat; width:90px; height:35px; color:#fff; padding:0 20px; border:0; text-align:left; font:13px/17px 'ProximaNova-ExtraBold', sans-serif; text-transform:uppercase; margin-top:0; }
+.searchbox .btn:hover { background-position:0 -35px }
+.searchbox .btn:active { background-position:0 -70px }
+.searchbox .txt { float:left; background:#fff; font:13px/16px Arial, Helvetica, sans-serif; color:#383435; border:1px solid #c1c1c1; -moz-box-shadow:0 1px 2px rgba(0,0,0,0.15) inset; -webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15) inset; box-shadow:0 1px 2px rgba(0,0,0,0.15) inset; -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px; padding:8px 12px 9px; margin:0; height:16px; position:relative; width:163px; }
+.authorbox { width:100%; padding:30px; box-sizing:border-box; -moz-box-sizing:border-box; background:#F0F0F0; float:left; margin:30px 0 0; }
+.authorbox h2 { font-size:18px; }
+#content p.viewallauthor { margin-bottom:0 }
+#content .author_photo .photo { float:left; width:100px; height:100px; -webkit-border-radius:110px; -moz-border-radius:110px; border-radius:110px; position:relative; margin:0 22px 0 0; }
+.authorboxauthorpage { margin-bottom:40px }
+#content .authorbox p { margin-bottom:10px }
+
+/* PRETTYPHOTO STYLES
+-------------------------------------------------------------------*/	
+
+div.pp_default .pp_top,div.pp_default .pp_top .pp_middle,div.pp_default .pp_top .pp_left,div.pp_default .pp_top .pp_right,div.pp_default .pp_bottom,div.pp_default .pp_bottom .pp_left,div.pp_default .pp_bottom .pp_middle,div.pp_default .pp_bottom .pp_right{height:13px}div.pp_default .pp_top .pp_left{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/sprite.png) -78px -93px no-repeat}div.pp_default .pp_top .pp_middle{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/sprite_x.png) top left repeat-x}div.pp_default .pp_top .pp_right{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/sprite.png) -112px -93px no-repeat}div.pp_default .pp_content .ppt{color:#f8f8f8}div.pp_default .pp_content_container .pp_left{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/sprite_y.png) -7px 0 repeat-y;padding-left:13px}div.pp_default .pp_content_container .pp_right{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/sprite_y.png) top right repeat-y;padding-right:13px}div.pp_default .pp_next:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/sprite_next.png) center right no-repeat;cursor:pointer}div.pp_default .pp_previous:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/sprite_prev.png) center left no-repeat;cursor:pointer}div.pp_default .pp_expand{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/sprite.png) 0 -29px no-repeat;cursor:pointer;width:28px;height:28px}div.pp_default .pp_expand:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/sprite.png) 0 -56px no-repeat;cursor:pointer}div.pp_default .pp_contract{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/sprite.png) 0 -84px no-repeat;cursor:pointer;width:28px;height:28px}div.pp_default .pp_contract:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/sprite.png) 0 -113px no-repeat;cursor:pointer}div.pp_default .pp_close{width:30px;height:30px;background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/sprite.png) 2px 1px no-repeat;cursor:pointer}div.pp_default .pp_gallery ul li a{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/default_thumb.png) center center #f8f8f8;border:1px solid #aaa}div.pp_default .pp_gallery a.pp_arrow_previous,div.pp_default .pp_gallery a.pp_arrow_next{position:static;left:auto}div.pp_default .pp_nav .pp_play,div.pp_default .pp_nav .pp_pause{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/sprite.png) -51px 1px no-repeat;height:30px;width:30px}div.pp_default .pp_nav .pp_pause{background-position:-51px -29px}div.pp_default a.pp_arrow_previous,div.pp_default a.pp_arrow_next{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/sprite.png) -31px -3px no-repeat;height:20px;width:20px;margin:4px 0 0}div.pp_default a.pp_arrow_next{left:52px;background-position:-82px -3px}div.pp_default .pp_content_container .pp_details{margin-top:5px}div.pp_default .pp_nav{clear:none;height:30px;width:105px;position:relative}div.pp_default .pp_nav .currentTextHolder{font-family:Georgia;font-style:italic;font-color:#999;font-size:11px;left:75px;line-height:25px;position:absolute;top:2px;margin:0;padding:0 0 0 10px}div.pp_default .pp_close:hover,div.pp_default .pp_nav .pp_play:hover,div.pp_default .pp_nav .pp_pause:hover,div.pp_default .pp_arrow_next:hover,div.pp_default .pp_arrow_previous:hover{opacity:0.7}div.pp_default .pp_description{font-size:11px;font-weight:700;line-height:14px;margin:5px 50px 5px 0}div.pp_default .pp_bottom .pp_left{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/sprite.png) -78px -127px no-repeat}div.pp_default .pp_bottom .pp_middle{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/sprite_x.png) bottom left repeat-x}div.pp_default .pp_bottom .pp_right{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/sprite.png) -112px -127px no-repeat}div.pp_default .pp_loaderIcon{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/default/loader.gif) center center no-repeat}div.light_rounded .pp_top .pp_left{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_rounded/sprite.png) -88px -53px no-repeat}div.light_rounded .pp_top .pp_right{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_rounded/sprite.png) -110px -53px no-repeat}div.light_rounded .pp_next:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_rounded/btnNext.png) center right no-repeat;cursor:pointer}div.light_rounded .pp_previous:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_rounded/btnPrevious.png) center left no-repeat;cursor:pointer}div.light_rounded .pp_expand{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_rounded/sprite.png) -31px -26px no-repeat;cursor:pointer}div.light_rounded .pp_expand:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_rounded/sprite.png) -31px -47px no-repeat;cursor:pointer}div.light_rounded .pp_contract{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_rounded/sprite.png) 0 -26px no-repeat;cursor:pointer}div.light_rounded .pp_contract:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_rounded/sprite.png) 0 -47px no-repeat;cursor:pointer}div.light_rounded .pp_close{width:75px;height:22px;background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_rounded/sprite.png) -1px -1px no-repeat;cursor:pointer}div.light_rounded .pp_nav .pp_play{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_rounded/sprite.png) -1px -100px no-repeat;height:15px;width:14px}div.light_rounded .pp_nav .pp_pause{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_rounded/sprite.png) -24px -100px no-repeat;height:15px;width:14px}div.light_rounded .pp_arrow_previous{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_rounded/sprite.png) 0 -71px no-repeat}div.light_rounded .pp_arrow_next{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_rounded/sprite.png) -22px -71px no-repeat}div.light_rounded .pp_bottom .pp_left{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_rounded/sprite.png) -88px -80px no-repeat}div.light_rounded .pp_bottom .pp_right{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_rounded/sprite.png) -110px -80px no-repeat}div.dark_rounded .pp_top .pp_left{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/sprite.png) -88px -53px no-repeat}div.dark_rounded .pp_top .pp_right{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/sprite.png) -110px -53px no-repeat}div.dark_rounded .pp_content_container .pp_left{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/contentPattern.png) top left repeat-y}div.dark_rounded .pp_content_container .pp_right{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/contentPattern.png) top right repeat-y}div.dark_rounded .pp_next:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/btnNext.png) center right no-repeat;cursor:pointer}div.dark_rounded .pp_previous:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/btnPrevious.png) center left no-repeat;cursor:pointer}div.dark_rounded .pp_expand{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/sprite.png) -31px -26px no-repeat;cursor:pointer}div.dark_rounded .pp_expand:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/sprite.png) -31px -47px no-repeat;cursor:pointer}div.dark_rounded .pp_contract{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/sprite.png) 0 -26px no-repeat;cursor:pointer}div.dark_rounded .pp_contract:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/sprite.png) 0 -47px no-repeat;cursor:pointer}div.dark_rounded .pp_close{width:75px;height:22px;background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/sprite.png) -1px -1px no-repeat;cursor:pointer}div.dark_rounded .pp_description{margin-right:85px;color:#fff}div.dark_rounded .pp_nav .pp_play{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/sprite.png) -1px -100px no-repeat;height:15px;width:14px}div.dark_rounded .pp_nav .pp_pause{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/sprite.png) -24px -100px no-repeat;height:15px;width:14px}div.dark_rounded .pp_arrow_previous{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/sprite.png) 0 -71px no-repeat}div.dark_rounded .pp_arrow_next{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/sprite.png) -22px -71px no-repeat}div.dark_rounded .pp_bottom .pp_left{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/sprite.png) -88px -80px no-repeat}div.dark_rounded .pp_bottom .pp_right{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/sprite.png) -110px -80px no-repeat}div.dark_rounded .pp_loaderIcon{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/loader.gif) center center no-repeat}div.dark_square .pp_left,div.dark_square .pp_middle,div.dark_square .pp_right,div.dark_square .pp_content{background:#000}div.dark_square .pp_description{color:#fff;margin:0 85px 0 0}div.dark_square .pp_loaderIcon{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_square/loader.gif) center center no-repeat}div.dark_square .pp_expand{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_square/sprite.png) -31px -26px no-repeat;cursor:pointer}div.dark_square .pp_expand:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_square/sprite.png) -31px -47px no-repeat;cursor:pointer}div.dark_square .pp_contract{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_square/sprite.png) 0 -26px no-repeat;cursor:pointer}div.dark_square .pp_contract:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_square/sprite.png) 0 -47px no-repeat;cursor:pointer}div.dark_square .pp_close{width:75px;height:22px;background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_square/sprite.png) -1px -1px no-repeat;cursor:pointer}div.dark_square .pp_nav{clear:none}div.dark_square .pp_nav .pp_play{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_square/sprite.png) -1px -100px no-repeat;height:15px;width:14px}div.dark_square .pp_nav .pp_pause{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_square/sprite.png) -24px -100px no-repeat;height:15px;width:14px}div.dark_square .pp_arrow_previous{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_square/sprite.png) 0 -71px no-repeat}div.dark_square .pp_arrow_next{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_square/sprite.png) -22px -71px no-repeat}div.dark_square .pp_next:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_square/btnNext.png) center right no-repeat;cursor:pointer}div.dark_square .pp_previous:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_square/btnPrevious.png) center left no-repeat;cursor:pointer}div.light_square .pp_expand{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_square/sprite.png) -31px -26px no-repeat;cursor:pointer}div.light_square .pp_expand:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_square/sprite.png) -31px -47px no-repeat;cursor:pointer}div.light_square .pp_contract{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_square/sprite.png) 0 -26px no-repeat;cursor:pointer}div.light_square .pp_contract:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_square/sprite.png) 0 -47px no-repeat;cursor:pointer}div.light_square .pp_close{width:75px;height:22px;background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_square/sprite.png) -1px -1px no-repeat;cursor:pointer}div.light_square .pp_nav .pp_play{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_square/sprite.png) -1px -100px no-repeat;height:15px;width:14px}div.light_square .pp_nav .pp_pause{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_square/sprite.png) -24px -100px no-repeat;height:15px;width:14px}div.light_square .pp_arrow_previous{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_square/sprite.png) 0 -71px no-repeat}div.light_square .pp_arrow_next{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_square/sprite.png) -22px -71px no-repeat}div.light_square .pp_next:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_square/btnNext.png) center right no-repeat;cursor:pointer}div.light_square .pp_previous:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_square/btnPrevious.png) center left no-repeat;cursor:pointer}div.facebook .pp_top .pp_left{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/sprite.png) -88px -53px no-repeat}div.facebook .pp_top .pp_middle{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/contentPatternTop.png) top left repeat-x}div.facebook .pp_top .pp_right{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/sprite.png) -110px -53px no-repeat}div.facebook .pp_content_container .pp_left{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/contentPatternLeft.png) top left repeat-y}div.facebook .pp_content_container .pp_right{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/contentPatternRight.png) top right repeat-y}div.facebook .pp_expand{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/sprite.png) -31px -26px no-repeat;cursor:pointer}div.facebook .pp_expand:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/sprite.png) -31px -47px no-repeat;cursor:pointer}div.facebook .pp_contract{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/sprite.png) 0 -26px no-repeat;cursor:pointer}div.facebook .pp_contract:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/sprite.png) 0 -47px no-repeat;cursor:pointer}div.facebook .pp_close{width:22px;height:22px;background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/sprite.png) -1px -1px no-repeat;cursor:pointer}div.facebook .pp_description{margin:0 37px 0 0}div.facebook .pp_loaderIcon{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/loader.gif) center center no-repeat}div.facebook .pp_arrow_previous{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/sprite.png) 0 -71px no-repeat;height:22px;margin-top:0;width:22px}div.facebook .pp_arrow_previous.disabled{background-position:0 -96px;cursor:default}div.facebook .pp_arrow_next{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/sprite.png) -32px -71px no-repeat;height:22px;margin-top:0;width:22px}div.facebook .pp_arrow_next.disabled{background-position:-32px -96px;cursor:default}div.facebook .pp_nav{margin-top:0}div.facebook .pp_nav p{font-size:15px;padding:0 3px 0 4px}div.facebook .pp_nav .pp_play{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/sprite.png) -1px -123px no-repeat;height:22px;width:22px}div.facebook .pp_nav .pp_pause{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/sprite.png) -32px -123px no-repeat;height:22px;width:22px}div.facebook .pp_next:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/btnNext.png) center right no-repeat;cursor:pointer}div.facebook .pp_previous:hover{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/btnPrevious.png) center left no-repeat;cursor:pointer}div.facebook .pp_bottom .pp_left{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/sprite.png) -88px -80px no-repeat}div.facebook .pp_bottom .pp_middle{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/contentPatternBottom.png) top left repeat-x}div.facebook .pp_bottom .pp_right{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/sprite.png) -110px -80px no-repeat}div.pp_pic_holder a:focus{outline:none}div.pp_overlay{background:#000;display:none;left:0;position:absolute;top:0;width:100%;z-index:9500}div.pp_pic_holder{display:none;position:absolute;width:100px;z-index:10000}.pp_content{height:40px;min-width:40px}* html .pp_content{width:40px}.pp_content_container{position:relative;text-align:left;width:100%}.pp_content_container .pp_left{padding-left:20px}.pp_content_container .pp_right{padding-right:20px}.pp_content_container .pp_details{float:left;margin:10px 0 2px}.pp_description{display:none;margin:0}.pp_social{float:left;margin:7px 0 0}.pp_social .facebook{float:left;position:relative;top:-1px;margin-left:5px;width:55px;overflow:hidden}.pp_social .twitter{float:left}.pp_nav{clear:right;float:left;margin:3px 10px 0 0}.pp_nav p{float:left;margin:2px 4px}.pp_nav .pp_play,.pp_nav .pp_pause{float:left;margin-right:4px;text-indent:-10000px}a.pp_arrow_previous,a.pp_arrow_next{display:block;float:left;height:15px;margin-top:3px;overflow:hidden;text-indent:-10000px;width:14px}.pp_hoverContainer{position:absolute;top:0;width:100%;z-index:2000}.pp_gallery{display:none;left:50%;margin-top:-50px;position:absolute;z-index:10000}.pp_gallery div{float:left;overflow:hidden;position:relative}.pp_gallery ul{float:left;height:35px;position:relative;white-space:nowrap;margin:0 0 0 5px;padding:0}.pp_gallery ul a{border:1px rgba(0,0,0,0.5) solid;display:block;float:left;height:33px;overflow:hidden}.pp_gallery ul a img{border:0}.pp_gallery li{display:block;float:left;margin:0 5px 0 0;padding:0}.pp_gallery li.default a{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/facebook/default_thumbnail.gif) 0 0 no-repeat;display:block;height:33px;width:50px}.pp_gallery .pp_arrow_previous,.pp_gallery .pp_arrow_next{margin-top:7px!important}a.pp_next{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;display:block;float:right;height:100%;text-indent:-10000px;width:49%}a.pp_previous{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;display:block;float:left;height:100%;text-indent:-10000px;width:49%}a.pp_expand,a.pp_contract{cursor:pointer;display:none;height:20px;position:absolute;right:30px;text-indent:-10000px;top:10px;width:20px;z-index:20000}a.pp_close{position:absolute;right:0;top:0;display:block;line-height:22px;text-indent:-10000px}.pp_loaderIcon{display:block;height:24px;left:50%;position:absolute;top:50%;width:24px;margin:-12px 0 0 -12px}#pp_full_res{line-height:1!important}#pp_full_res .pp_inline{text-align:left}#pp_full_res .pp_inline p{margin:0 0 15px}div.ppt{color:#fff;display:none;font-size:17px;z-index:9999;margin:0 0 5px 15px}div.pp_default .pp_content,div.light_rounded .pp_content{background-color:#fff}div.pp_default #pp_full_res .pp_inline,div.light_rounded .pp_content .ppt,div.light_rounded #pp_full_res .pp_inline,div.light_square .pp_content .ppt,div.light_square #pp_full_res .pp_inline,div.facebook .pp_content .ppt,div.facebook #pp_full_res .pp_inline{color:#000}div.pp_default .pp_gallery ul li a:hover,div.pp_default .pp_gallery ul li.selected a,.pp_gallery ul a:hover,.pp_gallery li.selected a{border-color:#fff}div.pp_default .pp_details,div.light_rounded .pp_details,div.dark_rounded .pp_details,div.dark_square .pp_details,div.light_square .pp_details,div.facebook .pp_details{position:relative}div.light_rounded .pp_top .pp_middle,div.light_rounded .pp_content_container .pp_left,div.light_rounded .pp_content_container .pp_right,div.light_rounded .pp_bottom .pp_middle,div.light_square .pp_left,div.light_square .pp_middle,div.light_square .pp_right,div.light_square .pp_content,div.facebook .pp_content{background:#fff}div.light_rounded .pp_description,div.light_square .pp_description{margin-right:85px}div.light_rounded .pp_gallery a.pp_arrow_previous,div.light_rounded .pp_gallery a.pp_arrow_next,div.dark_rounded .pp_gallery a.pp_arrow_previous,div.dark_rounded .pp_gallery a.pp_arrow_next,div.dark_square .pp_gallery a.pp_arrow_previous,div.dark_square .pp_gallery a.pp_arrow_next,div.light_square .pp_gallery a.pp_arrow_previous,div.light_square .pp_gallery a.pp_arrow_next{margin-top:12px!important}div.light_rounded .pp_arrow_previous.disabled,div.dark_rounded .pp_arrow_previous.disabled,div.dark_square .pp_arrow_previous.disabled,div.light_square .pp_arrow_previous.disabled{background-position:0 -87px;cursor:default}div.light_rounded .pp_arrow_next.disabled,div.dark_rounded .pp_arrow_next.disabled,div.dark_square .pp_arrow_next.disabled,div.light_square .pp_arrow_next.disabled{background-position:-22px -87px;cursor:default}div.light_rounded .pp_loaderIcon,div.light_square .pp_loaderIcon{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/light_rounded/loader.gif) center center no-repeat}div.dark_rounded .pp_top .pp_middle,div.dark_rounded .pp_content,div.dark_rounded .pp_bottom .pp_middle{background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/prettyPhoto/dark_rounded/contentPattern.png) top left repeat}div.dark_rounded .currentTextHolder,div.dark_square .currentTextHolder{color:#c4c4c4}div.dark_rounded #pp_full_res .pp_inline,div.dark_square #pp_full_res .pp_inline{color:#fff}.pp_top,.pp_bottom{height:20px;position:relative}* html .pp_top,* html .pp_bottom{padding:0 20px}.pp_top .pp_left,.pp_bottom .pp_left{height:20px;left:0;position:absolute;width:20px}.pp_top .pp_middle,.pp_bottom .pp_middle{height:20px;left:20px;position:absolute;right:20px}* html .pp_top .pp_middle,* html .pp_bottom .pp_middle{left:0;position:static}.pp_top .pp_right,.pp_bottom .pp_right{height:20px;left:auto;position:absolute;right:0;top:0;width:20px}.pp_fade,.pp_gallery li.default a img{display:none}
+
+/* ---- jquery :jplayer ---- */
+div.jp-audio { font-size:1em; font-family:Arial, sans-serif; color:#fff; line-height:1.6; width:459px; margin:4px 0 13px 0; }
+div.jp-interface { height:30px; position:relative; width:459px; background:rgb(58,59,60); background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/jplayer.png) 0 -210px; background:-webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(34,34,34)), color-stop(1, rgb(58,59,60))); background:-moz-linear-gradient(center bottom, rgb(34,34,34) 0%, rgb(58,59,60) 100%); -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; }
+div.jp-interface a { -webkit-transition-property:none; -moz-transition-property:none; -o-transition-property:none; transition-property:none; }
+div.jp-interface ul.jp-controls { list-style-type:none; padding:0; margin:0; }
+div.jp-interface ul.jp-controls li { display:inline }
+div.jp-interface ul.jp-controls a { position:absolute; overflow:hidden; text-indent:-9999px; }
+a.jp-play, a.jp-pause { width:33px; height:30px; z-index:1; outline:none; }
+a.jp-play, a.jp-pause { top:0; left:0; border-right:1px solid rgb(36,37,38); }
+a.jp-play { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/jplayer.png) 0 0 no-repeat }
+a.jp-play:hover { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/jplayer.png) -33px 0 no-repeat }
+a.jp-pause { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/jplayer.png) 0 -30px no-repeat; display:none; }
+a.jp-pause:hover { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/jplayer.png) -33px -30px no-repeat }
+div.jp-progress-container { position:absolute; top:0; left:34px; width:324px; height:6px; padding:12px 10px; border-left:1px solid rgb(50,51,52); border-right:1px solid rgb(36,37,38); }
+div.jp-progress { position:absolute; overflow:hidden; }
+div.jp-progress { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/jplayer.png) 0 -192px repeat-x; width:322px; height:7px; padding:1px; }
+div.jp-seek-bar { width:0px; height:5px; cursor:pointer; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/jplayer.png) 0 -163px repeat-x; -webkit-border-radius:1px; -moz-border-radius:1px; border-radius:1px; }
+div.jp-play-bar { width:0px; height:5px; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/jplayer.png) 0 -133px repeat-x; -webkit-border-radius:1px; -moz-border-radius:1px; border-radius:1px; }
+div.jp-volume-bar-container { position:absolute; top:0; left:380px; width:40px; height:6px; padding:12px 10px; border-left:1px solid rgb(50,51,52); }
+div.jp-volume-bar { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/jplayer.png) 0 -192px repeat-x; position:relative; overflow:hidden; width:40px; height:9px; cursor:pointer; }
+div.jp-volume-bar { top:0; left:20px; }
+div.jp-volume-bar-value { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/jplayer.png) 0 -133px repeat-x; width:0px; height:5px; margin:1px; -webkit-border-radius:1px; -moz-border-radius:1px; border-radius:1px; }
+a.jp-mute, a.jp-unmute { width:17px; height:13px; z-index:1; outline:none; }
+a.jp-mute, a.jp-unmute { top:9px; left:389px; }
+a.jp-mute { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/jplayer.png) -10px -68px no-repeat }
+a.jp-mute:hover { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/jplayer.png) -43px -68px no-repeat }
+a.jp-unmute { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/jplayer.png) -10px -98px no-repeat; display:none; }
+a.jp-unmute:hover { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/jplayer.png) -43px -98px no-repeat }
+div.jp-jplayer { width:0px; height:0px; }
+div.jp-jplayer { background-color:#000000 }
+/**** Isotope Filtering ****/
+.isotope-item { z-index:2 }
+.isotope-hidden.isotope-item { pointer-events:none; z-index:1; }
+/**** Isotope CSS3 transitions ****/
+.isotope, .isotope .isotope-item { -webkit-transition-duration:0.8s; -moz-transition-duration:0.8s; -ms-transition-duration:0.8s; -o-transition-duration:0.8s; transition-duration:0.8s; }
+.isotope { -webkit-transition-property:height, width; -moz-transition-property:height, width; -ms-transition-property:height, width; -o-transition-property:height, width; transition-property:height, width; }
+.isotope .isotope-item { -webkit-transition-property:-webkit-transform, opacity; -moz-transition-property:-moz-transform, opacity; -ms-transition-property:-ms-transform, opacity; -o-transition-property:-o-transform, opacity; transition-property:transform, opacity; }
+/**** disabling Isotope CSS3 transitions ****/
+.isotope.no-transition, .isotope.no-transition .isotope-item, .isotope .isotope-item.no-transition { -webkit-transition-duration:0s; -moz-transition-duration:0s; -ms-transition-duration:0s; -o-transition-duration:0s; transition-duration:0s; }
+/*! fancyBox v2.1.4 fancyapps.com | fancyapps.com/fancybox/#license */
+.fancybox-wrap, .fancybox-skin, .fancybox-outer, .fancybox-inner, .fancybox-image, .fancybox-wrap iframe, .fancybox-wrap object, .fancybox-nav, .fancybox-nav span, .fancybox-tmp { padding:0; margin:0; border:0; outline:none; vertical-align:top; }
+.fancybox-wrap { position:absolute; top:0; left:0; z-index:8020; }
+.fancybox-skin { position:relative; text-shadow:none; }
+.fancybox-opened { box-shadow:0 15px 25px rgba(0,0,0,.75); z-index:8030; }
+.fancybox-outer, .fancybox-inner { position:relative }
+.fancybox-inner { overflow:hidden }
+.fancybox-type-iframe .fancybox-inner { -webkit-overflow-scrolling:touch }
+.fancybox-error { color:#444; font:14px/20px "Helvetica Neue", Helvetica, Arial, sans-serif; margin:0; padding:15px; white-space:nowrap; }
+.fancybox-image, .fancybox-iframe { display:block; width:100%; height:100%; }
+.fancybox-image { max-width:100%; max-height:100%; }
+#fancybox-loading { position:fixed; top:50%; left:50%; margin-top:-22px; margin-left:-22px; background:#000; opacity:0.8; cursor:pointer; z-index:8060; }
+#fancybox-loading div { width:44px; height:44px; background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/fancybox_loading.gif) no-repeat 50% 50%; }
+.fancybox-close { position:absolute; top:-18px; right:-18px; width:36px; height:36px; cursor:pointer; z-index:8040; }
+.fancybox-nav { position:absolute; top:0; width:40%; height:100%; cursor:pointer; text-decoration:none; -webkit-tap-highlight-color:rgba(0,0,0,0); z-index:8040; }
+.fancybox-prev { left:0 }
+.fancybox-next { right:0 }
+.fancybox-nav span { position:absolute; top:50%; width:36px; height:34px; margin-top:-18px; cursor:pointer; z-index:8040; visibility:hidden; }
+.fancybox-prev span { left:10px; background-position:0 -36px; }
+.fancybox-next span { right:10px; background-position:0 -72px; }
+.fancybox-nav:hover span { visibility:visible }
+.fancybox-tmp { position:absolute; top:-99999px; left:-99999px; visibility:hidden; max-width:99999px; max-height:99999px; overflow:visible !important; }
+/* Overlay helper */
+.fancybox-lock { overflow:hidden; }
+.fancybox-overlay { position:absolute; top:0; left:0; overflow:hidden; display:none; z-index:8010; }
+.fancybox-overlay-fixed { position:fixed; bottom:0; right:0; }
+.fancybox-lock .fancybox-overlay { overflow:auto; overflow-y:scroll; }
+
+
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+@media screen and (min-width:1380px) {
+	.vc_responsive .vc_row-fluid.text-box,
+	.container,
+	.vc_responsive .vc_row-fluid.testimonials-box > .column_container, 
+	.blue-box .container{ width:1300px; margin-left: auto; margin-right:auto; }
+	.flexslider .slides li img { display:block; width:440px; }
+}
+
+
+@media screen and (min-width:750px) and (max-width:1379px) {
+	.vc_responsive .vc_row-fluid.testimonials-box > .column_container, 
+	.container, .blue-box .container { width:100%; padding:0 5%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+	#header .container { margin:0 auto; }
+	#header .logo { cursor:pointer; display:block; float:none; padding:0; text-align:center; margin:0; }
+	#header .logo .logotext { margin:45px 0 0; }
+	#menu { float:none; width:100%; text-align:center; padding:0; margin:0; }
+	#menu li { float:none; display:inline-block; text-align:center; height:138px; }
+	#featured-image .contact-form { background-color:#FFFFFF; box-shadow:0 0 10px rgba(0, 0, 0, 0.75); position:absolute; right:5%; top:38px; min-width:275px; }
+	#featured-image .caption { bottom:30px; left:0; position:absolute; width:50%; }
+	#featured-image .caption h1 { font-size:29px; padding:13px 16px 13px 20px; line-height:36px; }
+	#featured-image .caption h2 { font-size:21px; padding:13px 13px 13px 20px; line-height:18px; }
+	.video-box h2 { width:48% }
+}
+
+@media screen and (max-width:750px) {
+	.vc_responsive .vc_row-fluid.testimonials-box > .column_container, 
+	.container { width:90%; padding:0 5%; width:auto; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+	.vc_responsive .vc_row-fluid [class*="vc_span"]{ width:100%; margin-left:0; }
+	#content, aside {  float:none; width:100%; }
+	#head .contact { position:relative; height:30px; width:250px; text-indent:-999em; z-index:100; }
+	#head .contact strong { position:absolute; top:0; z-index:99; text-indent:0; display:block; left:20px; }
+	#head .social { z-index:200; position:relative; }
+	#header { position:relative; height:41px; }
+	#menu { position:absolute; top:40px; left:0; right:0; display:none; z-index:9999; border-top:1px solid #c3c3c3; background-color:#fff; box-shadow:0 5px 5px rgba(0,0,0,.12); }
+	#menu:after { content:""; position:absolute; top:-1px; right:0; height:1px; background:#fff; z-index:10000; width:46px; }
+	#menu > ul > li:hover, #menu > ul > li { display:block; float:none; background:none; padding:0; margin:0; color:#5d5d5d; height:auto; font-size:13px; }
+	#menu li ul { position:static !important; background:none; border:0; width:100%; box-shadow:none; }
+	#menu li ul li:hover > a, #menu li ul li a:hover { background:#cecece }
+	#menu li ul li li a { background:#e4e4e4 !important }
+	#menu li ul li li:hover a { background:#0089be !important; color:#fff !important; }
+	#menu li.withsub>a:after { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/bg_submenu_m.png) no-repeat; width:8px; height:7px; position:absolute; top:0; right:0; margin:20px 23px; content:""; }
+	#menu li ul li:hover > a:after, #menu li ul li a:hover:after { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/bg_submenu_m.png) no-repeat; width:8px; height:7px; }
+	#menu li:before, #menu li:after { display:none !important }
+	#menu li span { display:none !important }
+	#menu > ul > li:hover > a, #menu > ul > li > a:hover, #menu > ul > li > a { display:block; text-align:left; float:none; background:none; margin:0; border:0; padding:0; height:auto; text-transform:none; font-weight:normal; color:#5d5d5d; font-family:'ProximaNova-Regular'; font-size:13px; padding:10px 26px; }
+	#menu ul a { border-bottom:1px solid #b9b9b9 !important }
+	#menu ul li { border-bottom:0 !important }
+	#menu > ul > li:hover > a, #menu > ul > li > a:hover { background:#cecece }
+	#menu > ul > li li a { background:#e4e4e4 !important; padding-left:35px !important; }
+	#menu > ul > li li li a { padding-left:55px !important }
+	#menu > ul > li li a:hover { background:#0089be !important; color:#fff; }
+	#menu ul li:hover > a:after { background-position:0 -7px }
+	#featured-image { height:123px; clear:both; margin:0 0 570px; }
+	#featured-image .contact-form { position:static; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; padding:25px 30px; background:#fff; min-height:571px; width:100%; }
+	#featured-image .container { margin:0; padding:0; }
+	#featured-image .caption { overflow:hidden; padding:30px 0 0; margin:0; height:93px; position:static; width:100%; }
+	#featured-image .caption h2, #featured-image .caption h1 { padding:8px 8px 8px 12px; line-height:20px; }
+	#featured-image .caption h2 { font-size:15px; padding:4px 8px 4px 12px; line-height:15px; }
+	.video-box h2 { padding:5px 10px 0 70px; font-size:24px; line-height:24px; margin:0 15px; width:auto; }
+	#featured-image .caption h1 { font-size:21px }
+	.blue-box { text-align:center }
+	.blue-box article { padding:0 30px 30px; margin:0; float:none; width:auto; }
+	.blue-box article:last-child { padding:0 30px 30px }
+	.blue-box article h2, .blue-box article p, .blue-box article .btn-more { margin-left:0 }
+	.blue-box article .number { float:none; display:inline-block; margin:0 auto 10px; }
+	.blue-box article .btn-more { float:none; display:inline-block; }
+	.blue-box .container { padding:0; overflow:hidden; width:auto; }
+	.blue-box section { overflow:hidden; width:auto; margin-right:0; content:""; }
+	.menu-trigger { background:url(/web/20160113145520im_/http://californiatitle24.net/wp-content/themes/revive-pro/assets/images/bg_menu.png) no-repeat; height:41px; width:50px; position:absolute; top:0; right:0; display:block; }
+	.menu-trigger.active { background-position:0 -40px }
+	#header .logo { padding:5px 0; height:20px; }
+	#header .logo h3 { display:none }
+	#header .logo .logotext { font-size:18px; margin:0; }
+	#header .logo .imglogo{ margin:0;}
+	#header .logo .imglogo img{ height:30px; }
+	.projects-box { padding:30px 0 }
+	.projects-box h2 { font-size:21px; padding:0 0 10px; line-height:26px; }
+	.flexslider .slides li { width:320px }
+	.flexslider .slides li img { display:block; width:320px; background:#c00; }
+	.testimonials-box { padding:30px 0; border:0; }
+	.testimonials-box { padding:30px 0; border:0; }
+	.testimonials-box section:after { display:none }
+	.testimonials-box section { border:none }
+	.testimonials-box article { width:100%; border-top:1px solid #DFE0DC; }
+	.testimonials-box .container { padding:0 10px; min-width:0; }
+	.testimonials-box article img.avatar { display:block; margin:0 auto 15px; float:none; }
+	#footer .col { float:none; width:auto !important; padding:0 15px 30px; text-align:center; }
+	#footer .col dl dt { float:left; margin:0; padding-bottom:6px; width:48%; text-align:right; }
+	#footer .col dl dd { float:right; margin:0; padding-bottom:6px; width:48%; text-align:left; }
+	.w1-ttl { padding:78px 0 0 }
+	.text-box .col { float:none; width:auto; padding:0 15px; }
+	.text-box .col:last-child { float:none; width:auto; padding:0 15px; }
+	.text-box h2, .testimonials-box h2 { font-size:21px; padding:0 0 10px; line-height:26px; }
+	
+	.contactcont { padding:0 }
+	.contactcont h1 { font-size:24px; line-height:30px; margin:0 0 16px; }
+	.contactcont .block { padding:0 20px 17px; margin:0 -20px; }
+	.contactcont .block strong { display:block }
+	.contact-form { width:100%; padding:0; }
+	.contact-form .holder { padding:29px 10% 0; margin:0; }
+	.contact-form .holder .mask-002 { display:none }
+	.contact-form { padding:0; height:auto; margin:0 auto; }
+	.contact-form .area { padding:0 }
+	.contact-form .rowa { padding:0 }
+	.contact-form .area textarea { width:94%; padding:2% 3%; margin:0 0 15px; }
+	.contact-form .txt { width:94%; padding:2% 3%; float:none; margin:0 0 15px 0; }
+	.contact-form .rowa.btn-row { padding-top:11px }
+	.contact-form .text { display:block; float:none; text-align:center; clear:both; margin:0 0 20px 0; }
+	.contact-form .btn { margin:-8px 0 14px }
+	.form-holder { margin-bottom:50px; }
+	.contact-form .wpb_alert { margin:0 auto 30px; width:auto; }
+	.form-holder .mask1 { display:none }
+	.direction-form { width:90%; margin:0 0 25px; padding:0 5%; }
+	.direction-form .map { width:100%; margin:0; }
+	.direction-form .map img { width:100%; margin:0 -10px; }
+	.direction-form .rowa { width:300px; margin:0 auto; }
+	.direction-form .rowa .txt { width:193px; margin:0 22px 0 20px; }
+	.direction-form .map { width:auto }
+	.text-wrap .col, .text-wrap .holder {  float:none; padding:0; width:100%; }
+	
+	.featured .frame .box { margin:0 auto;  width:100%; }
+	.team .headline .select-form { float:left; width: 281px; }
+	
+	div.jp-audio { width:280px; }
+	div.jp-interface { width: 280px; }
+	div.jp-progress-container { left: 34px; width: 145px; }
+	div.jp-progress { width: 143px; }		
+	div.jp-volume-bar-container { left: 201px; }	
+	a.jp-mute, a.jp-unmute { left: 210px; }
+	
+	#content .reaction .comments > li .photo { height: 51px;  margin: 0 19px 0 0;  width: 51px; }
+	#content .reaction .comments>li ul { margin:0; padding:0; list-style:none; }
+	
+	.theme-info .holder { width:100%; float:none; }
+	.theme-info .rightcol { float:none; width:100%; }
+	
+	.about aside { width:100%; }
+	.about .holder { width:100%; }
+	
+	#content .comment-form .txt:first-of-type { margin-bottom:30px; }
+	#content .comment-form .txt { float:left; padding: 3% 1% 3% 3%; position: relative; width: 96%; }
+}
+
+/* =============================================================================
+   Non-Semantic Helper Classes
+   ========================================================================== */
+
+	.ir { display:block; border:0; text-indent:-999em; overflow:hidden; background-color:transparent; background-repeat:no-repeat; text-align:left; direction:ltr; *line-height:0; }
+	.ir br { display:none; }
+	.hidden { display:none !important; visibility:hidden; }
+	.visuallyhidden { border:0; clip:rect(0 0 0 0); height:1px; margin:-1px; overflow:hidden; padding:0; position:absolute; width:1px; }
+	.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip:auto; height:auto; margin:0; overflow:visible; position:static; width:auto; }
+	.invisible { visibility:hidden; }
+	.clearfix:before, .clearfix:after { content:""; display:table; }
+	.clearfix:after { clear:both; content:"."; display:block; visibility:hidden; height:0; }
+	.clearfix { *zoom:1; }
+
+/* =============================================================================
+   Print Styles
+   ========================================================================== */
+ 
+@media print {
+	* { background:transparent !important; color:black !important; box-shadow:none !important; text-shadow:none !important; filter:none !important; -ms-filter:none !important; } /* Black prints faster:h5bp.com/s */
+	a, a:visited { text-decoration:underline; }
+	a[href]:after { content:" (" attr(href) ")"; }
+	abbr[title]:after { content:" (" attr(title) ")"; }
+	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content:""; }  /* Don't show links for images, or javascript/internal links */
+	pre, blockquote { border:1px solid #999; page-break-inside:avoid; }
+	thead { display:table-header-group; } /* h5bp.com/t */
+	tr, img { page-break-inside:avoid; }
+	img { max-width:100% !important; }
+	@page { margin:0.5cm; }
+	p, h2, h3 { orphans:3; widows:3; }
+	h2, h3 { page-break-after:avoid; }
+}
+
+body .wpb_button{ margin-bottom:4px !important; }
+body .wpb_accordion_section h3{ padding-bottom:0; }
+body #main #content ul.wpb_tabs_nav{ margin-bottom:0; }
+body .wpb_row{ margin-left:0; margin-right:0; }
+body > .wpb_row, .wpb_content_element{
+    margin-bottom: 0px;
+}
+body.vc_responsive .wpb_row .vc_span12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+body .testimonial-section{ margin-bottom:0; }
+body.vc_responsive .testimonial-section .wpb_column{ padding-left:0; padding-right:0; }
+/*
+     FILE ARCHIVED ON 14:55:20 Jan 13, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 06:37:30 Dec 14, 2018.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 49.942 (3)
+  esindex: 0.007
+  captures_list: 68.338
+  CDXLines.iter: 14.275 (3)
+  PetaboxLoader3.datanode: 40.257 (4)
+  exclusion.robots: 0.201
+  exclusion.robots.policy: 0.184
+  RedisCDXSource: 0.647
+  PetaboxLoader3.resolve: 13.442
+  load_resource: 78.112
+*/

@@ -1,0 +1,198 @@
+jQuery(window).ready(function(){
+	
+	jQuery('nav > ul > li:has(ul)').addClass('drop');
+	
+	jQuery('nav ul li:has(ul)').addClass('withsub');
+	
+	jQuery(".videocontainer").fitVids();
+	
+	jQuery("#discoverlink").click(function(){
+		jQuery('html, body').animate({
+			 scrollTop: jQuery("#discoverlink").offset().top
+		 }, 1000);
+		return false;
+	});
+	
+	jQuery('.flexslider').flexslider({
+		animation: "slide",
+		slideshow: false,
+		itemWidth: 320,
+		itemMargin: 0,
+		move: 1,
+		minItems: 1,
+		maxItems: 3
+	});
+	jQuery('.fancybox-media').fancybox({
+		openEffect  : 'none',
+		closeEffect : 'none',
+		helpers : {
+			media : {}
+		}
+	});
+	jQuery('.menu-trigger').click(function() {
+		jQuery(this).toggleClass("active")
+		jQuery("#menu").fadeToggle();
+	});
+	
+	jQuery.fn.exists = function(){return this.length>0;}
+	if (jQuery('.slideset').exists()) {
+		jQuery('.slideset').gallery({
+			duration: 500,
+			listOfSlides: '.slideshow > li'
+		});
+	}
+	if (jQuery('.slideset .img').exists()) {
+		jQuery('.slideset .img').flexslider({
+			animation: "slide",
+			controlNav: true,
+			directionNav: false,
+			touch: true,
+			slideshow: false,
+			move: 1,
+			itemWidth:301
+		});
+	}
+	if (jQuery('.gallery').exists()) {
+		jQuery('.gallery').flexslider({
+			animation: "slide",
+			controlNav: true,
+			directionNav: false,
+			smoothHeight: true,
+			slideshow: false,
+			touch: true
+		});
+	}
+	/*
+	if (jQuery('.gallery2').exists()) {
+		jQuery('.gallery2').flexslider({
+			animation: "slide",
+			controlNav: true,
+			directionNav: true,
+			slideshow: false,
+			smoothHeight: true,
+			touch: true
+		});
+	}
+	*/
+	if (jQuery('.team .gallery3').exists()) {
+		jQuery('.team .gallery3').flexslider({
+			animation: "slide",
+			controlNav: true,
+			directionNav: false,
+			slideshow: false,
+			touch: true,
+			itemWidth: 310
+		});
+	}
+	/*
+	if (jQuery('.gallery4').exists()) {
+		jQuery('.gallery4').flexslider({
+			animation: "slide",
+			directionNav: false,
+			touch: true
+		});
+	}
+	*/
+	if (jQuery('.gallery5').exists()) {
+		jQuery('.gallery5').flexslider({
+			animation: "slide",
+			directionNav: false,
+			smoothHeight: true,
+			touch: true
+		});
+	}
+	
+	// isotope
+	// cache container
+	var jQuerycontainer = jQuery('.portholder');
+	// initialize isotope
+	jQuerycontainer.isotope({
+		itemSelector : '.item'
+	});
+	
+	// filter items when filter link is clicked
+	jQuery('.sel').change(function(e) {
+	
+		jQuery('.sel option').each(function() {
+			if(jQuery(this).html() == jQuery('.select-sel span.center').html()){ 
+				$filterType = '.' + jQuery(this).attr('value');
+			}
+		});
+		
+		if($filterType == '.all'){
+			$filterType = '*';
+		}
+		
+		jQuerycontainer.isotope({ 
+			itemSelector : '.item',
+			filter: $filterType 
+		});
+		
+		return false;
+	});
+	
+	if (jQuery('form').exists()) {
+		if (window.location.href.indexOf('debugmode') != -1) {
+			// DEBUG START: replace custom forms on button click
+			customForm.lib.domReady(function(){
+				// destroy button
+				var btnStop = document.createElement('button');
+				btnStop.innerHTML = 'Stop Toggling!';
+				document.body.insertBefore(btnStop, document.body.childNodes[0]);
+				btnStop.onclick = function(){
+					clearInterval(timer);
+				};
+				// destroy button
+				var btnDestroy = document.createElement('button');
+				btnDestroy.innerHTML = 'Destroy All';
+				document.body.insertBefore(btnDestroy, document.body.childNodes[0]);
+				btnDestroy.onclick = customForm.customForms.destroyAll;
+				// refresh button
+				var btnRefresh = document.createElement('button');
+				btnRefresh.innerHTML = 'refreshCustomForms';
+				document.body.insertBefore(btnRefresh, document.body.childNodes[0]);
+				btnRefresh.onclick = customForm.customForms.refreshAll;
+				// init button
+				var btnInit = document.createElement('button');
+				btnInit.innerHTML = 'initCustomForms';
+				document.body.insertBefore(btnInit, document.body.childNodes[0]);
+				btnInit.onclick = customForm.customForms.replaceAll;
+				// start cyclic refresh
+				var flag = false, timer;
+				timer = setInterval(function(){
+					//if(flag) customForm.customForms.destroyAll();
+					//else customForm.customForms.replaceAll();
+					flag = !flag;
+				}, 2000);
+			});
+		// DEBUG END
+		}
+		else {
+			// replace custom forms
+			customForm.lib.domReady(function(){
+				customForm.customForms.replaceAll();
+			});
+		}
+	}
+}); 
+/*
+     FILE ARCHIVED ON 20:46:21 Jan 13, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 06:37:31 Dec 14, 2018.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 62.362 (3)
+  esindex: 0.015
+  captures_list: 76.041
+  CDXLines.iter: 10.525 (3)
+  PetaboxLoader3.datanode: 73.493 (4)
+  exclusion.robots: 0.157
+  exclusion.robots.policy: 0.146
+  RedisCDXSource: 0.603
+  PetaboxLoader3.resolve: 141.01 (2)
+  load_resource: 161.614
+*/

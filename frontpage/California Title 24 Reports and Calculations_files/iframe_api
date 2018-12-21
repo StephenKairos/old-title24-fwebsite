@@ -1,0 +1,22 @@
+
+if (!window['YT']) {var YT = {loading: 0,loaded: 0};}if (!window['YTConfig']) {var YTConfig = {'host': 'https://web.archive.org/web/20160109050920/http://www.youtube.com/'};}if (!YT.loading) {YT.loading = 1;(function(){var l = [];YT.ready = function(f) {if (YT.loaded) {f();} else {l.push(f);}};window.onYTReady = function() {YT.loaded = 1;for (var i = 0; i < l.length; i++) {try {l[i]();} catch (e) {}}};YT.setConfig = function(c) {for (var k in c) {if (c.hasOwnProperty(k)) {YTConfig[k] = c[k];}}};var a = document.createElement('script');a.type = 'text/javascript';a.id = 'www-widgetapi-script';a.src = 'http:' + '//web.archive.org/web/20160109050920/http://s.ytimg.com/yts/jsbin/www-widgetapi-vflSn5T3y/www-widgetapi.js';a.async = true;var b = document.getElementsByTagName('script')[0];b.parentNode.insertBefore(a, b);})();}
+/*
+     FILE ARCHIVED ON 05:09:20 Jan 09, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 06:37:46 Dec 14, 2018.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 621.688 (18)
+  esindex: 127.42 (5)
+  CDXLines.iter: 415.807 (12)
+  PetaboxLoader3.datanode: 481.22 (19)
+  exclusion.robots: 1.024 (5)
+  exclusion.robots.policy: 0.941 (5)
+  RedisCDXSource: 88.531 (5)
+  PetaboxLoader3.resolve: 17.768
+  load_resource: 33.692
+*/

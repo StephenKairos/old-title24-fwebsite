@@ -1,0 +1,70 @@
+.collapseomatic {
+	background-image: url(/web/20141219061203im_/http://californiatitle24.net/wp-content/plugins/jquery-collapse-o-matic/images/arrow-down.png);
+	background-repeat: no-repeat;
+	padding: 0 0 10px 16px;
+	cursor: pointer;
+}
+.arrowright {
+	background-position: top right;
+	padding: 0 16px 10px 0;
+}
+.noarrow {
+	background-image: none !important;
+	padding: 0 0 10px 0;
+}
+.colomat-hover {
+	text-decoration: underline;
+}
+.colomat-close {
+	background-image: url(/web/20141219061203im_/http://californiatitle24.net/wp-content/plugins/jquery-collapse-o-matic/images/arrow-up.png);
+}
+.colomat-swap {
+	display: none;
+}
+.collapseomatic_excerpt, .collapseomatic_content {
+	margin-top: 0px;
+	margin-left: 16px;
+	padding: 0px;
+}
+.content_collapse_wrapper {
+	position: absolute; left: -999em;
+}
+.collapseall, .expandall {
+	cursor: pointer;
+}
+.collapseall:hover, .expandall:hover {
+	text-decoration: underline;
+}
+.maptastic {
+	position: absolute !important;
+	left: -10000px !important;
+	display:block !important;
+}
+.span_fix {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.span_fix:before, .span_fix:after {
+	content: none;
+}
+/*
+     FILE ARCHIVED ON 06:12:03 Dec 19, 2014 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 06:35:14 Dec 14, 2018.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 297.816 (3)
+  esindex: 0.013
+  captures_list: 320.125
+  CDXLines.iter: 13.477 (3)
+  PetaboxLoader3.datanode: 479.35 (4)
+  exclusion.robots: 0.264
+  exclusion.robots.policy: 0.247
+  RedisCDXSource: 4.014
+  PetaboxLoader3.resolve: 269.443 (2)
+  load_resource: 485.797
+*/

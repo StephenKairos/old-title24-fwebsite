@@ -1,0 +1,111 @@
+/*global jQuery */
+/*! 
+* FitVids 1.0
+*
+* Copyright 2011, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
+* Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+* Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+*
+* Date: Thu Sept 01 18:00:00 2011 -0500
+*/
+
+(function( $ ){
+
+  $.fn.fitVids = function( options ) {
+    var settings = {
+      customSelector: null
+    }
+    
+    var div = document.createElement('div'),
+        ref = document.getElementsByTagName('base')[0] || document.getElementsByTagName('script')[0];
+        
+  	div.className = 'fit-vids-style';
+    div.innerHTML = '&shy;<style>         \
+      .fluid-width-video-wrapper {        \
+         width: 100%;                     \
+         position: relative;              \
+         padding: 0;                      \
+      }                                   \
+                                          \
+      .fluid-width-video-wrapper iframe,  \
+      .fluid-width-video-wrapper object,  \
+      .fluid-width-video-wrapper embed {  \
+         position: absolute;              \
+         top: 0;                          \
+         left: 0;                         \
+         width: 100%;                     \
+         height: 100%;                    \
+      }                                   \
+    </style>';
+                      
+    ref.parentNode.insertBefore(div,ref);
+    
+    if ( options ) { 
+      $.extend( settings, options );
+    }
+    
+    return this.each(function(){
+      var selectors = [
+        "iframe[src^='https://web.archive.org/web/20141219072609/http://player.vimeo.com/']", 
+        "iframe[src^='https://web.archive.org/web/20141219072609/http://www.youtube.com/']", 
+        "iframe[src^='https://web.archive.org/web/20141219072609/https://www.youtube.com/']", 
+        "iframe[src^='https://web.archive.org/web/20141219072609/http://www.kickstarter.com/']",
+	"iframe[src^='https://web.archive.org/web/20141219072609/http://www.funnyordie.com/']",
+	"iframe[src^='https://web.archive.org/web/20141219072609/http://media.mtvnservices.com/']",
+	"iframe[src^='https://web.archive.org/web/20141219072609/http://trailers.apple.com/']",
+	"iframe[src^='https://web.archive.org/web/20141219072609/http://www.brightcove.com/']",
+	"iframe[src^='https://web.archive.org/web/20141219072609/http://blip.tv/']",
+	"iframe[src^='https://web.archive.org/web/20141219072609/http://break.com/']",
+	"iframe[src^='https://web.archive.org/web/20141219072609/http://www.traileraddict.com/']",
+	"iframe[src^='https://web.archive.org/web/20141219072609/http://d.yimg.com/']",
+	"iframe[src^='https://web.archive.org/web/20141219072609/http://movies.yahoo.com/']",
+	"iframe[src^='https://web.archive.org/web/20141219072609/http://www.dailymotion.com/']",
+	"iframe[src^='https://web.archive.org/web/20141219072609/http://s.mcstatic.com/']",
+        "object", 
+        "embed"
+
+      ];
+      
+      if (settings.customSelector) {
+        selectors.push(settings.customSelector);
+      }
+      
+      var $allVideos = $(this).find(selectors.join(','));
+
+      $allVideos.each(function(){
+        var $this = $(this);
+        if (this.tagName.toLowerCase() == 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; } 
+        var height = this.tagName.toLowerCase() == 'object' ? $this.attr('height') : $this.height(),
+            aspectRatio = height / $this.width();
+		if(!$this.attr('id')){
+			var videoID = 'fitvid' + Math.floor(Math.random()*999999);
+			$this.attr('id', videoID);
+		}
+        $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
+        $this.removeAttr('height').removeAttr('width');
+      });
+    });
+  
+  }
+})( jQuery );
+/*
+     FILE ARCHIVED ON 07:26:09 Dec 19, 2014 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 06:35:14 Dec 14, 2018.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 55.171 (3)
+  esindex: 0.008
+  captures_list: 75.789
+  CDXLines.iter: 14.144 (3)
+  PetaboxLoader3.datanode: 89.967 (4)
+  exclusion.robots: 0.301
+  exclusion.robots.policy: 0.284
+  RedisCDXSource: 1.898
+  PetaboxLoader3.resolve: 67.157
+  load_resource: 132.481
+*/
